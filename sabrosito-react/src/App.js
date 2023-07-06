@@ -1,5 +1,7 @@
 import React from 'react';
-import "./App.css"
+import './App.css'
+import GooglePlacesAutocomplete from 'react-google-autocomplete'
+
 // Componente de la barra superior
 const TopBar = () => {
   return (
@@ -21,7 +23,12 @@ const TopBar = () => {
 // Componente de autocompletado de ubicación
 const LocationInput = () => {
   const handlePlaceSelect = (place) => {
-    // Lógica para manejar la ubicación seleccionada
+    // Obtén la ubicación seleccionada
+    const { geometry, formatted_address } = place;
+    const { lat, lng } = geometry.location;
+
+    // Haz algo con la ubicación seleccionada
+    console.log('Ubicación seleccionada:', lat(), lng(), formatted_address);
   };
 
   return (
@@ -33,7 +40,7 @@ const LocationInput = () => {
 const Banner = () => {
   return (
     <div className="banner">
-      <img src="/src/img/Platillo.jpg" alt="Banner" />
+
       <h2>Texto del banner</h2>
       <button>Botón</button>
     </div>
@@ -43,9 +50,13 @@ const Banner = () => {
 // Componente de la sección de ofertas
 const OffersSection = () => {
   return (
+  <>
+    <h1>Ofertas</h1>
     <div className="offers-section">
+
       {/* Contenido de la sección de ofertas */}
     </div>
+    </>
   );
 };
 
@@ -53,7 +64,7 @@ const OffersSection = () => {
 const Footer = () => {
   return (
     <footer>
-      {/* Contenido del pie de página */}
+      <p>Todos los derechos reservados &copy; 2023</p>
     </footer>
   );
 };
