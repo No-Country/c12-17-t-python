@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="133f48b6-13b2-41b7-8d03-a13a003f334d" name="Changes" comment="" />
+    <list default="true" id="133f48b6-13b2-41b7-8d03-a13a003f334d" name="Changes" comment="Se instalan las dependencias de react y se construye el html">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabrositoDjango/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/sabrositoDjango/settings.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +43,18 @@
       <option name="presentableId" value="Default" />
       <updated>1688671035373</updated>
     </task>
+    <task id="LOCAL-00001" summary="Se instalan las dependencias de react y se construye el html">
+      <created>1688672942853</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688672942853</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se instalan las dependencias de react y se construye el html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se instalan las dependencias de react y se construye el html" />
   </component>
 </project>
