@@ -70,7 +70,7 @@ function App() {
       <section className="ofertas">
         <h2>Ofertas</h2>
         <div className="oferta-container">
-          <img src="imagen-oferta.jpg" alt="Imagen de la oferta" />
+          <img src="" alt="Imagen de la oferta" />
           <div className="oferta-details">
             <h3>Título de la oferta</h3>
             <p>Descripción de la oferta</p>

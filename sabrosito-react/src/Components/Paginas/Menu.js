@@ -16,19 +16,19 @@ const Menu = () => {
       <div className="menu-options">
         {/* Opción 1 */}
         <div className="menu-option">
-          <img src="ruta-de-la-imagen-desayunos" alt="Desayunos" />
+          <img src="" alt="Desayunos" />
           <h2>Desayunos</h2>
         </div>
 
         {/* Opción 2 */}
         <div className="menu-option">
-          <img src="ruta-de-la-imagen-comidas" alt="Comidas" />
+          <img src="" alt="Comidas" />
           <h2>Comidas</h2>
         </div>
 
         {/* Opción 3 */}
         <div className="menu-option">
-          <img src="ruta-de-la-imagen-bebidas" alt="Bebidas" />
+          <img src="" alt="Bebidas" />
           <h2>Bebidas</h2>
         </div>
       </div>

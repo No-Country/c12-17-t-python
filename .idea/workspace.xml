@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="133f48b6-13b2-41b7-8d03-a13a003f334d" name="Changes" comment="Maquetación, faltan colores e imagenes oficiales">
+    <list default="true" id="133f48b6-13b2-41b7-8d03-a13a003f334d" name="Changes" comment="Paginas de menu y login mas css">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sabrosito-react/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/img/descarga.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,14 +27,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/dansa/Desktop/c12-17-t-python/sabrosito-react/src/Components/Paginas",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dansa/Desktop/c12-17-t-python/sabrosito-react/src/Components/Paginas&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\dansa\Desktop\c12-17-t-python\sabrosito-react\src\Components\Paginas" />
@@ -69,13 +70,28 @@
       <option name="project" value="LOCAL" />
       <updated>1688679908574</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Paginas de menu y login mas css">
+      <created>1688766433003</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688766433003</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Paginas de menu y login mas css">
+      <created>1688766452313</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688766452313</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se instalan las dependencias de react y se construye el html" />
     <MESSAGE value="Estructura HTML creada" />
     <MESSAGE value="Maquetación, faltan colores e imagenes oficiales" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maquetación, faltan colores e imagenes oficiales" />
+    <MESSAGE value="Paginas de menu y login mas css" />
+    <option name="LAST_COMMIT_MESSAGE" value="Paginas de menu y login mas css" />
   </component>
 </project>

@@ -179,7 +179,7 @@ body {
 .image {
   width: 200px;
   height: 200px;
-  background-image: url('ruta-a-la-imagen.jpg');
+  background-image: url('');
   background-size: cover;
   background-position: center;
 }
