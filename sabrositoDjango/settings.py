@@ -55,7 +55,9 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            Path.joinpath(BASE_DIR, 'sabrosito-react/build')
+    
+            #Path.joinpath(BASE_DIR, 'sabrosito-react/build)'
+            Path.joinpath(BASE_DIR, 'sabrosito-react/templates')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -126,5 +128,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
     Path.joinpath(BASE_DIR, 'sabrosito-react/build/static'),
-    Path.joinpath(BASE_DIR, 'sabrosito-react/src/img'),
+    Path.joinpath(BASE_DIR, 'sabrosito-react/src/Components/Paginas/img'),
+    Path.joinpath(BASE_DIR, 'sabrosito-react/src/Components/Paginas'),
 ]

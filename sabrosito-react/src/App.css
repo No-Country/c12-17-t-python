@@ -5,6 +5,14 @@ body {
   padding: 0;
 }
 
+.imagen{
+    background-image:url('./Components/Paginas/img/descarga.jpg');
+    width:700px;
+    height:400px;
+    object-fit: cover;
+    flex:1;
+}
+
 .app {
   max-width: 1200px;
   margin: 0 auto;

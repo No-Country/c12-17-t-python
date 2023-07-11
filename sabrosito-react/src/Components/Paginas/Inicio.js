@@ -45,7 +45,7 @@ function Inicio() {
             <button>Botón 2</button>
           </div>
         </div>
-        <img src="imagen-banner.jpg" alt="Imagen del banner" />
+        <img className='imagen' alt="Imagen del banner" />
       </section>
       <section className="ofertas">
         <h2>Ofertas</h2>

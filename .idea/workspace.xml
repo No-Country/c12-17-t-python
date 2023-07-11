@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="133f48b6-13b2-41b7-8d03-a13a003f334d" name="Changes" comment="Paginas de menu y login mas css">
-      <change afterPath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Inicio.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/ui/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/ui/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/ui/Top.js" afterDir="false" />
+    <list default="true" id="133f48b6-13b2-41b7-8d03-a13a003f334d" name="Changes" comment="Imagenes">
+      <change afterPath="$PROJECT_DIR$/sabrosito-react/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabrosito-react/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sabrosito-react/templates/menu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Inicio.js" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Inicio.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,14 +89,33 @@
       <option name="project" value="LOCAL" />
       <updated>1688766452313</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Platillas arregladas">
+      <created>1688928095024</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688928095024</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Imagenes">
+      <created>1688928142383</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688928142383</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Se instalan las dependencias de react y se construye el html" />
     <MESSAGE value="Estructura HTML creada" />
     <MESSAGE value="Maquetación, faltan colores e imagenes oficiales" />
     <MESSAGE value="Paginas de menu y login mas css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Paginas de menu y login mas css" />
+    <MESSAGE value="Platillas arregladas" />
+    <MESSAGE value="Imagenes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Imagenes" />
   </component>
 </project>
