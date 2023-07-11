@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client'
 import './App.css'
+import Inicio from './Inicio';
 
+const rootElement = document.getElementById("#react_container");
+const root = createRoot(rootElement);
+
+root.render(
+  <React.StrictMode>
+    <Inicio/>
+  </React.StrictMode>
+)
+
+
+/*
 function Inicio() {
 
   return (
@@ -14,8 +27,11 @@ function Inicio() {
 }
 
 Inicio()
+*/
+
+
+//createRoot(document.getElementById('react_container')).render(<Inicio/>)
 
 const domcCon = document.querySelector('#react_container')
-
-ReactDOM.render(<Inicio/>, domcCon)
+//ReactDOM.render(<Inicio/>, domcCon)
 //export default Inicio;
