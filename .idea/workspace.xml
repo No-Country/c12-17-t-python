@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="133f48b6-13b2-41b7-8d03-a13a003f334d" name="Changes" comment="Imagenes">
-      <change afterPath="$PROJECT_DIR$/sabrosito-react/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sabrosito-react/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sabrosito-react/templates/menu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Inicio.js" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/Components/Paginas/Inicio.js" afterDir="false" />
-    </list>
+    <list default="true" id="133f48b6-13b2-41b7-8d03-a13a003f334d" name="Changes" comment="Imagenes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

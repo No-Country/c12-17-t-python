@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% content top %}
+
+<header className="header">
+    <div className="logo">Logo</div>
+    <div className="location">Ubicación</div>
+    <nav className="menu">
+      <ul>
+        <li><a href="#">Menu</a></li>
+        <li>
+            <a href="#">
+                {/* Aca dependiendo del estado si esta logeado o no carga una opcion */}
+                {logeado ? (<p>User</p>) : (<p>Registrarse</p>)}
+            </a>
+        </li>
+
+      </ul>
+      <div className="cart-icon"><i className="fa fa-shopping-cart"></i></div>
+    </nav>
+  </header>
+
+{% endblock %}

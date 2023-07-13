@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<html>
+    <body id="react_container">
+
+        <div className="app">
+            {% block header %}
+            {% include 'Header.html' %}
+            {% endblock %}
+
+            {% content top %}
+            {% endblock %}
+            
+            
+            {% block body %}
+            {% endblock %}
+                
+            {% block footer %}
+            {% include 'Footer.html' %}
+            {% endblock %}
+            </div>
+    </body>
+    
+</html>
