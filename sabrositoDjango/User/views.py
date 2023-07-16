@@ -64,7 +64,7 @@ def login_view(request):
 @login_required
 def menu(request):
     if request.method == 'GET':
-        return render(request, 'menu.html')
+        return render(request, 'Menu.html')
 
 @login_required    
 def perfil(request):

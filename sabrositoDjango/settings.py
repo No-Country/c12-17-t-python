@@ -122,9 +122,12 @@ USE_TZ = True
 
 STATIC_URL = 'sabrosito-react/src/'
 
-STATICFILES_DIRS = [
+STATICFILES_DIRS = (
     Path.joinpath(BASE_DIR, 'sabrosito-react/src'),
-]
+    Path.joinpath(BASE_DIR, 'sabrosito-react/Components/Paginas'),
+)
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
