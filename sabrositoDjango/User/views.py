@@ -66,7 +66,22 @@ def menu(request):
     if request.method == 'GET':
         return render(request, 'Menu.html')
 
+def comidas(request):
+    if request.method == 'GET':
+        return render(request, 'Opciones.html')
+    
+def info(request):
+    if request.method == 'GET':
+        return render(request, 'InfoMenu.html')
 
+def pagos(request):
+    if request.method == 'GET':
+        return render(request, 'pagos.html')
+    
+def perfilPrueba(request):
+    if request.method == 'GET':
+        return render(request, 'perfil.html')
+    
 def perfil(request):
     userLog = request.user
     if request.method == 'GET':
