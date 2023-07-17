@@ -1,17 +1,19 @@
-{% extends "base.html" %}
 {% load static %}
 
 {% block header %}
-<div className="top-bar">
-    <div className="contact-info">
-      <span>Correo: ejemplo@correo.com</span>
-      <span>Teléfono: 123-456-7890</span>
-    </div>
-    <div className="social-media-icons">
-      <a href="#"><i className="fa fa-facebook"></i></a>
-      <a href="#"><i className="fa fa-twitter"></i></a>
-      <a href="#"><i className="fa fa-instagram"></i></a>
-    </div>
-  </div>
 
+<head>
+  <link rel="stylesheet" href="{% static '/Css/top.css' %}" media="screen">
+</head>
+
+<div class="top-bar">
+  <div class="contact-info">
+    Datos de contacto: +123456789 | correo@example.com
+  </div>
+  <div class="social-icons">
+    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+  </div>
+</div>
 {% endblock %}

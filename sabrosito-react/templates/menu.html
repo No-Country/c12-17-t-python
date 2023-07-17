@@ -1,32 +1,63 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block body %}
+<head>
+  <link rel="stylesheet" href="{% static '/Css/Menu.css' %}" media="screen">
+</head>
 
-<div className="menu-container">
-
-    {/* Título */}
-    <h1 className="menu-title">Menús</h1>
-
-    {/* Opciones de menú */}
-    <div className="image-container">
-      {/* Opción 1 */}
-      <div className="image-container">
-        <img   alt="Desayunos" className='img'/>
-        <h2>Desayunos</h2>
-      </div>
-
-      {/* Opción 2 */}
-      <div className="image-container">
-        <img  alt="Comidas" className='img'/>
-        <h2>Comidas</h2>
-      </div>
-
-      {/* Opción 3 */}
-      <div className="image-container">
-        <img  alt="Bebidas" className='img'/>
-        <h2>Bebidas</h2>
+<section class="u-align-center u-clearfix u-section-1" id="sec-ce00">
+  <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+    <lt-highlighter class="lt-highlighter--grid-item" style="display: none; z-index: 1 !important;">
+      <lt-div spellcheck="false" class="lt-highlighter__wrapper" style="width: 144px; height: 53px; transform: none !important; transform-origin: 72px 26.4px !important; zoom: 1 !important; margin-top: 62px; margin-left: 498px;">
+        <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 144px; height: 55px;">
+          <canvas class="lt-highlighter__canvas" width="144" height="55" style="display: none; top: 0px; left: 0px;"></canvas>
+        </lt-div>
+      </lt-div>
+    </lt-highlighter>
+    <h1 class="u-text u-text-default u-text-1">Menu</h1>
+  </div>
+</section>
+<section class="u-clearfix u-section-2" id="sec-1c6d">
+  <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+    <div class="u-expanded-width u-list u-list-1">
+      <div class="u-repeater u-repeater-1">
+        <div class="u-container-style u-image u-list-item u-repeater-item u-shading u-image-1" data-image-width="2000" data-image-height="1333">
+          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+            <lt-highlighter class="lt-highlighter--grid-item" style="display: none; z-index: 1 !important;">
+              <lt-div spellcheck="false" class="lt-highlighter__wrapper" style="width: 169px; height: 36px; transform: none !important; transform-origin: 84.4px 18px !important; zoom: 1 !important; margin-top: 300px; margin-left: 30px;">
+                <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 169px; height: 36px;"></lt-div>
+              </lt-div>
+            </lt-highlighter>
+            <h3 class="u-text u-text-default u-text-1">Desayunos</h3>
+            <p class="u-text u-text-default u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+          </div>
+        </div>
+        <div class="u-container-style u-image u-list-item u-repeater-item u-shading u-image-2" data-image-width="2000" data-image-height="1333">
+          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+            <lt-highlighter class="lt-highlighter--grid-item" style="display: none; z-index: 1 !important;">
+              <lt-div spellcheck="false" class="lt-highlighter__wrapper" style="width: 162px; height: 36px; transform: none !important; transform-origin: 80.8px 18px !important; zoom: 1 !important; margin-top: 300px; margin-left: 30px;">
+                <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 162px; height: 36px;"></lt-div>
+              </lt-div>
+            </lt-highlighter>
+            <h3 class="u-text u-text-default u-text-3">Almuerzos</h3>
+            <p class="u-text u-text-default u-text-4">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+          </div>
+        </div>
+        <div class="u-container-style u-image u-list-item u-repeater-item u-shading u-image-3" data-image-width="2000" data-image-height="1333">
+          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+            <lt-highlighter class="lt-highlighter--grid-item" style="display: none; z-index: 1 !important;">
+              <lt-div spellcheck="false" class="lt-highlighter__wrapper" style="width: 124px; height: 36px; transform: none !important; transform-origin: 62px 18px !important; zoom: 1 !important; margin-top: 300px; margin-left: 30px;">
+                <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 124px; height: 36px;"></lt-div>
+              </lt-div>
+            </lt-highlighter>
+            <h3 class="u-text u-text-default u-text-5">Bebidas</h3>
+            <p class="u-text u-text-default u-text-6">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
-  {% endblock %}
+</section>
+
+{% endblock %}
