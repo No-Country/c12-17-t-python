@@ -26,6 +26,8 @@
               <h2 class="u-text u-text-default u-text-1">¡Bienvenido!</h2>
               <div class="u-form u-form-1">
                 <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
+                  {% csrf_token %}
+                  {{ form }}
                   <div class="u-form-group u-form-name">
                     <label for="name-a657" class="u-label">Nombre</label>
                     <input type="text" placeholder="Introduzca su nombre" id="name-a657" name="username" class="u-input u-input-rectangle" required="">
@@ -46,9 +48,11 @@
                     <a href="#" class="u-btn u-btn-submit u-button-style">Enviar</a>
                     <input type="submit" value="submit" name="submit" class="u-form-control-hidden">
                   </div>
+                  <!--
                   <div class="u-form-send-message u-form-send-success"> Gracias! Tu mensaje ha sido enviado. </div>
                   
                   <div class="u-form-send-error u-form-send-message"> No se puede enviar su mensaje. Por favor, corrija los errores y vuelva a intentarlo. </div>
+                  -->
                 </form>
               </div>
             </div>
