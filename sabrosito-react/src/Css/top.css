@@ -1,8 +1,9 @@
 .top-bar {
-    background-color: #333;
+    background-color: #751061;
     color: #fff;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }

@@ -7167,9 +7167,7 @@ ul.u-text li:last-child {
 .u-video-poster {
   object-fit: cover;
   display: block;
-  vertical-align: middle;
-  background-size: cover;
-  background-position: 50% 50%;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 img.u-image,
