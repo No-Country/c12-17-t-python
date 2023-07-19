@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'paypal.standard.ipn',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sabrositoDjango.User',
     'sabrositoDjango.Cart',
+    'sabrositoDjango.Pay',
 ]
 
 MIDDLEWARE = [
@@ -138,3 +140,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGOUT_REDIRECT_URL = 'AddSession'
 
 LOGIN_URL = 'AddSession'
+
+PAYPAL_TEST = True
+
+PAYPAL_RECEIVER_EMAIL = 'sandbox@gmail.com'

@@ -15,17 +15,25 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from .User import views
+from .Pay import views as viewsPago
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('AddSession', views.login_view, name='login'),
     path('Signup', views.register, name='signup'),
-    path('menu', views.menu, name='menu'),
+    path('menu/', views.menu, name='menu'),
     path('comidas', views.comidas, name='comidas'),
     path('info', views.info, name='info'),
     path('pagos', views.pagos, name='pagos'),
     path('perfil', views.perfilPrueba, name='perfil'),
+
+
+    #URLS PAY
+    path('Paypal/', include('paypal.standard.ipn.urls')),   
+    path('pago',viewsPago.home ,name='pago'),
+    path('paypal-return',viewsPago.paypal_return ,name='paypal-return'),
+    path('paypal-cancel',viewsPago.paypal_cancel ,name='paypal-cancel'),
 ]
