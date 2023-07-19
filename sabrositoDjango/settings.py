@@ -143,4 +143,4 @@ LOGIN_URL = 'AddSession'
 
 PAYPAL_TEST = True
 
-PAYPAL_RECEIVER_EMAIL = 'sandbox@gmail.com'
+PAYPAL_RECEIVER_EMAIL = 'sb-zycg615187836@business.example.com'
