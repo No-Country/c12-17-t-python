@@ -8,6 +8,7 @@ class Product(models.Model):
     price =  models.DecimalField('Precio', max_digits=6, decimal_places=2)
     description = models.TextField('Descripción', blank=True)
     category = models.CharField('Categoria', max_length=120)
+    image = models.ImageField()
 
     def __str__(self):
         return str(self.id)
@@ -17,7 +18,7 @@ class Order(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     total = models.DecimalField(max_digits=8, decimal_places=2)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    
+
     def __str__(self):
         return str(self.id)
 
