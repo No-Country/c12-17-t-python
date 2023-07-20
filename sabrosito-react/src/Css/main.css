@@ -1,6 +1,6 @@
 
 .u-section-1 {
-    background-image: url("sabrosito-react/src/img/descarga.jpg");
+    background-image: url("../img/bg.jpg");
     background-position: 50% 50%;
     min-height: 50rem;
     background-size: contain;
