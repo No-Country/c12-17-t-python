@@ -69,8 +69,17 @@ def menu(request):
 def comidas(request):
     if request.method == 'GET':
         return render(request, 'Opciones.html')
+<<<<<<< Updated upstream
     
 def info(request):
+=======
+
+def pedidos(request):
+    if request.method == 'GET':
+        return render(request, 'Pedidos.html')
+
+def producto(request):
+>>>>>>> Stashed changes
     if request.method == 'GET':
         return render(request, 'InfoMenu.html')
 

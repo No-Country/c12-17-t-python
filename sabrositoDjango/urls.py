@@ -29,6 +29,7 @@ urlpatterns = [
     path('info', views.info, name='info'),
     path('pagos', views.pagos, name='pagos'),
     path('perfil', views.perfilPrueba, name='perfil'),
+<<<<<<< Updated upstream
 
 
     #URLS PAY
@@ -36,4 +37,7 @@ urlpatterns = [
     path('pago',viewsPago.home ,name='pago'),
     path('paypal-return',viewsPago.paypal_return ,name='paypal-return'),
     path('paypal-cancel',viewsPago.paypal_cancel ,name='paypal-cancel'),
+=======
+    path('pedidos', views.pedidos, name='pedidos'),
+>>>>>>> Stashed changes
 ]
