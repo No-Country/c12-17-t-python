@@ -70,9 +70,9 @@ def comidas(request):
     if request.method == 'GET':
         return render(request, 'Opciones.html')
     
-def info(request):
+def producto(request):
     if request.method == 'GET':
-        return render(request, 'InfoMenu.html')
+        return render(request, 'Producto.html')
 
 def pagos(request):
     if request.method == 'GET':
