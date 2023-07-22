@@ -8,16 +8,12 @@ class Product(models.Model):
     price =  models.DecimalField('Precio', max_digits=6, decimal_places=2)
     description = models.TextField('Descripción', blank=True)
     category = models.CharField('Categoria', max_length=120)
-<<<<<<< HEAD
-    image = models.ImageField()
-=======
-    image = models.ImageField('Imagen')
->>>>>>> a5a342e4edf9c9019a189430712b0365661231c7
+    image = models.ImageField('Imagen', blank=True)
+# >>>>>>> a5a342e4edf9c9019a189430712b0365661231c7
 
     def __str__(self):
         return str(self.id)
 
-<<<<<<< HEAD
 class Order(models.Model):
     address = models.CharField(max_length=200)
     date = models.DateTimeField(auto_now_add=True)
@@ -35,5 +31,5 @@ class Product_Order(models.Model):
 
     def __str__(self):
         return str(self.id)
-=======
->>>>>>> a5a342e4edf9c9019a189430712b0365661231c7
+
+# >>>>>>> a5a342e4edf9c9019a189430712b0365661231c7
