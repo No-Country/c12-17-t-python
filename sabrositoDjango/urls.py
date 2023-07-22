@@ -30,6 +30,7 @@ urlpatterns = [
     path('info', views.info, name='info'),
     path('pagos', views.pagos, name='pagos'),
     path('perfil', views.perfilPrueba, name='perfil'),
+    path('pedidos', views.pedidos, name='pedidos'),
 
 
     #URLS PAY
