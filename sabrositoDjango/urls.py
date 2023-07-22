@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from .User import views
 from .Pay import views as viewsPago
+from .Cart import views as viewsCart
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -36,4 +37,13 @@ urlpatterns = [
     path('pago',viewsPago.home ,name='pago'),
     path('paypal-return',viewsPago.paypal_return ,name='paypal-return'),
     path('paypal-cancel',viewsPago.paypal_cancel ,name='paypal-cancel'),
+
+
+    #URLS DEL CARRITO
+    path('tienda/', viewsCart.tienda, name="Tienda"),
+    path('agregar/<int:product_id>/', viewsCart.agregar_producto, name="Add"),
+    path('eliminar/<int:product_id>/', viewsCart.eliminar_producto, name="Del"),
+    path('restar/<int:product_id>/', viewsCart.restar_producto, name="Sub"),
+    path('limpiar/', viewsCart.limpiar_carrito, name="CLS"),
+    
 ]

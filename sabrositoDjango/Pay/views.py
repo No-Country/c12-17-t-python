@@ -5,19 +5,22 @@ from django.contrib import messages
 from django.urls import reverse
 from django.conf import settings
 from paypal.standard.forms import PayPalPaymentsForm
+from ..Cart import context_processor
+from sabrositoDjango.Cart.Carrito import Carrito
 
 # Create your views here.
 
 
 
 def home(request): 
+     context =context_processor.total_carrito(request)
      host = request.get_host()
      paypal_dict = {
           'business': settings.PAYPAL_RECEIVER_EMAIL,
-          'amount': '254', #Obtener el costo de la DB cuando se cree
+          'amount': context['total_carrito'],
           'item_name': 'Products',
           'invoice': str(uuid.uuid4()),
-          'currency_code': 'USD',
+          'currency_code': 'MXN',
           'notify_url': f'http://{host}{reverse("paypal-ipn")}',
           'return_url': f'http://{host}{reverse("paypal-return")}',
           'cancel_return': f'http://{host}{reverse("paypal-cancel")}',
@@ -62,6 +65,8 @@ def paypal_return(request):
           server.sendmail(correo_restaurante, 'davidcame124@gmail.com', msgEmail)
 
      enviar_email()
+     carrito = Carrito(request)
+     carrito.limpiar()
 
 
      return redirect('pago')
