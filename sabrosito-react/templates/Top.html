@@ -13,6 +13,7 @@
     <a href="" class="u-image u-logo u-image-1">
       <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
     </a>
+    <button class="btn-ubi" style="width: 300px; height: 65px;">Cll ### b ###</button>
     <nav class="u-menu u-menu-hamburger u-offcanvas u-menu-1" data-responsive-from="XL">
       <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700;">
         <a class="u-button-style u-custom-border u-custom-border-color u-custom-borders u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
@@ -72,23 +73,78 @@
    
     <a href="{% url 'login' %}">Login</a>
     <a href="{% url 'menu' %}">Menu</a>
-    <div class="u-container-style u-grey-10 u-group u-group-1">
-      <div class="u-container-layout u-container-layout-1"><span class="u-icon u-icon-1"><svg class="u-svg-link"
-            preserveAspectRatio="xMidYMin slice" viewBox="0 0 54.757 54.757" style="">
-            <use xlink:href="#svg-4a3d"></use>
-          </svg><svg class="u-svg-content" viewBox="0 0 54.757 54.757" x="0px" y="0px" id="svg-4a3d"
-            style="enable-background:new 0 0 54.757 54.757;">
-            <g>
-              <path d="M27.557,12c-3.859,0-7,3.141-7,7s3.141,7,7,7s7-3.141,7-7S31.416,12,27.557,12z M27.557,24c-2.757,0-5-2.243-5-5
-s2.243-5,5-5s5,2.243,5,5S30.314,24,27.557,24z"></path>
-              <path d="M40.94,5.617C37.318,1.995,32.502,0,27.38,0c-5.123,0-9.938,1.995-13.56,5.617c-6.703,6.702-7.536,19.312-1.804,26.952
-L27.38,54.757L42.721,32.6C48.476,24.929,47.643,12.319,40.94,5.617z M41.099,31.431L27.38,51.243L13.639,31.4
-C8.44,24.468,9.185,13.08,15.235,7.031C18.479,3.787,22.792,2,27.38,2s8.901,1.787,12.146,5.031
-C45.576,13.08,46.321,24.468,41.099,31.431z"></path>
-            </g>
-          </svg></span>
+    
+    <!--Carrito-->
+    <div class="container-icon">
+      <div class="container-cart-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon-cart"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+        <div class="count-products">
+          <span id="contador-productos">0</span>
+        </div>
+      </div>
+
+      <div class="container-cart-products hidden-cart">
+        <div class="row-product hidden">
+          <div class="cart-product">
+            <div class="info-cart-product">
+              <span class="cantidad-producto-carrito">1</span>
+              <p class="titulo-producto-carrito">Zapatos Nike</p>
+              <span class="precio-producto-carrito">$80</span>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-close"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div class="cart-total hidden">
+          <h3>Total:</h3>
+          <span class="total-pagar">$200</span>
+          <a href="{% url 'pagos'%}">Prueba</a>
+        </div>
+        <p class="cart-empty">El carrito está vacío</p>
+        <a href="{% url 'pagos'%}">Prueba</a>
       </div>
     </div>
   </div>
+
 </header>
+
+<section class="modal">
+  <div class="modal__container">
+    <a href="" class="modal__close">Cerrar</a>
+    <h2 class="modal__title">Ubicacion del restaurante</h2>
+    
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63619.73116557821!2d-74.13291392987465!3d4.7295100828102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f84fb3a1b2343%3A0x659550454c263a6c!2sMcDonald&#39;s!5e0!3m2!1sen!2sco!4v1689877648950!5m2!1sen!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+  </div>
+</section>
+
+
+<script src="{% static 'js/carrito.js' %}"></script>
+<script src="{% static 'js/maps.js' %}"></script>
 {% endblock %}

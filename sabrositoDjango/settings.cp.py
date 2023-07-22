@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['sabrocito.pythonanywhere.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'paypal.standard.ipn',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sabrositoDjango.User',
     'sabrositoDjango.Cart',
-    'sabrositoDjango.Pay',
 ]
 
 MIDDLEWARE = [
@@ -71,7 +69,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'sabrositoDjango.Cart.context_processor.total_carrito',
             ],
         },
     },
@@ -157,7 +154,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGOUT_REDIRECT_URL = 'AddSession'
 
 LOGIN_URL = 'AddSession'
-
-PAYPAL_TEST = True
-
-PAYPAL_RECEIVER_EMAIL = 'sb-zycg615187836@business.example.com'
