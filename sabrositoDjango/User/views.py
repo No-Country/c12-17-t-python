@@ -64,7 +64,7 @@ def login_view(request):
 
 def menu(request):
     if request.method == 'GET':
-        return render(request, 'Menu.html')
+        return render(request, 'menu.html')
 
 def comidas(request):
     if request.method == 'GET':
