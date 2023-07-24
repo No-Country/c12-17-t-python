@@ -1,10 +1,12 @@
-{% extends "base.html" %}
+{% extends "Base.html" %}
 {% load static %}
 
 {% block body %}
 
 <head>
-  <link rel="stylesheet" href="{% static '/Css/Info.css' %}" media="screen">
+    <!--link rel="stylesheet" href="{% static '/Css/Info.css' %}" media="screen"-->
+    <link rel="stylesheet" href="static/Css/Info.css" media="screen">
+
 </head>
 
 <section class="u-clearfix u-section-1" id="carousel_46ab">
@@ -96,7 +98,7 @@
               <p class="price">100</p>
               <a
                 class="u-btn botonPrueba btn-add-cart u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-3">
-                Agregar al carrito</a>              
+                Agregar al carrito</a>
             </div>
               <a href="{% url 'pagos' %}"
                 class="u-btn u-btn-round u-button-style u-hover-palette-1-light-1 u-palette-1-base u-radius-50 u-btn-4">

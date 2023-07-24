@@ -66,10 +66,6 @@ def menu(request):
     if request.method == 'GET':
         return render(request, 'menu.html')
 
-def comidas(request):
-    if request.method == 'GET':
-        return render(request, 'Opciones.html')
-
 def pedidos(request):
     if request.method == 'GET':
         return render(request, 'Pedidos.html')
@@ -96,5 +92,7 @@ def perfil(request):
         return redirect('menu')
     
 
-
-
+#comidas we
+def desayunos(request):
+    if request.method == 'GET':
+        return render(request, 'Desayunos.html')
