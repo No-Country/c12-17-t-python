@@ -42,9 +42,9 @@ def desayunos(request):
     return render(request, 'Desayunos.html', {'productos': productos})
 
 def almuerzos(request):
-    productos = Product.objects.filter(category='Almuerzos')
+    productos = Product.objects.filter(category='Comidas')
     return render(request, 'Almuerzos.html', {'productos': productos})
 
 def jugos(request):
-    productos = Product.objects.filter(category='Jugos')
+    productos = Product.objects.filter(category='Bebidas')
     return render(request, 'Jugos.html', {'productos': productos})
