@@ -1,23 +1,23 @@
-.titulo{
+#titulo{
   margin-left:25%;
 }
 
 
 @media (max-width: 1200px){
-  .titulo{
+  #titulo{
       margin-left:3%;
   }
 }
 
 @media (max-width: 990px){
-  .titulo{
+  #titulo{
       
       margin-left:0%;
   }
 }
 
 @media (max-width: 764px){
-  .titulo{
+  #titulo{
       
       margin-left:15%;
   }
@@ -112,11 +112,7 @@
     margin-left: 28px;
   }
 
-  .u-section-2 .u-form-1 {
-    width: 300px;
-    margin-right: 71px;
-    margin-left: -71px;
-  }
+ 
 }
 
 @media (max-width: 767px) {

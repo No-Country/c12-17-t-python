@@ -1,34 +1,45 @@
 {% extends "base.html" %}
 {% load static %}
 {% block body %}
+
 <head>
   <link rel="stylesheet" href="{% static '/Css/Registro.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static '/Css/Login.css' %}" media="screen">
 </head>
 <section class="u-clearfix u-section-2" id="sec-6617">
   <div class="u-clearfix u-sheet u-sheet-1">
     <div class="u-clearfix u-expanded-width u-gutter-0 u-layout-wrap u-layout-wrap-1">
       <div class="u-layout">
         <div class="u-layout-row">
-          <div class="u-align-left u-container-style u-image u-layout-cell u-left-cell u-shading u-size-30 u-size-xs-60 u-image-1" src="" data-image-width="1080" data-image-height="1080">
-            <img class="u-container-layout u-container-layout-1" src="sabrosito-react/src/img/registro.svg" style="background-color: #f2f2f2;">
+          <div
+            class="u-align-left u-container-style u-image u-layout-cell u-left-cell u-shading u-size-30 u-size-xs-60 u-image-1"
+            src="" data-image-width="1080" data-image-height="1080">
+            <img class="u-container-layout u-container-layout-1" src="sabrosito-react/src/img/registro.svg"
+              style="background-color: #f2f2f2;">
           </div>
-          <div class="u-align-left u-container-style u-grey-5 u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2">
+          <div
+            class="u-align-left u-container-style u-grey-5 u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2">
             <div class="u-container-layout u-container-layout-2">
               <lt-highlighter class="lt-highlighter--grid-item" style="display: none; z-index: 1 !important;">
-                <lt-div spellcheck="false" class="lt-highlighter__wrapper" style="width: 343px; height: 61px; transform: none !important; transform-origin: 171.6px 30.25px !important; zoom: 1 !important; margin-top: 92px; margin-left: 136px;">
-                  <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 343px; height: 63px;"></lt-div>
+                <lt-div spellcheck="false" class="lt-highlighter__wrapper"
+                  style="width: 343px; height: 61px; transform: none !important; transform-origin: 171.6px 30.25px !important; zoom: 1 !important; margin-top: 92px; margin-left: 136px;">
+                  <lt-div class="lt-highlighter__scroll-element"
+                    style="top: 0px; left: 0px; width: 343px; height: 63px;"></lt-div>
                 </lt-div>
               </lt-highlighter>
-              <h2 class="u-text u-text-default u-text-1" style="margin-left: 25%;">¡Bienvenido!</h2>
+              <h2 class="u-text u-text-default u-text-1 " id="titulo">¡Bienvenido!</h2>
               <div class="u-form u-form-1">
-                <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email" name="form" style="padding: 10px;">
+                <form action="" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="email"
+                  name="form" style="padding: 10px;">
                   <div class="u-form-group u-form-name">
                     <label for="name-a657" class="u-label">Nombre</label>
-                    <input type="text" placeholder="Introduzca su nombre" id="name-a657" name="name" class="u-input u-input-rectangle" required="">
+                    <input type="text" placeholder="Introduzca su nombre" id="name-a657" name="name"
+                      class="u-input u-input-rectangle" required="">
                   </div>
                   <div class="u-form-email u-form-group">
                     <label for="email-a657" class="u-label">Email</label>
-                    <input type="email" placeholder="Introduzca una dirección de correo electrónico válida" id="email-a657" name="email" class="u-input u-input-rectangle" required="">
+                    <input type="email" placeholder="Introduzca una dirección de correo electrónico válida"
+                      id="email-a657" name="email" class="u-input u-input-rectangle" required="">
                   </div>
                   <div class="u-form-group u-form-group-3">
                     <label for="text-3bfa" class="u-label">Entrada</label>
@@ -43,7 +54,8 @@
                     <input type="submit" value="submit" class="u-form-control-hidden">
                   </div>
                   <div class="u-form-send-message u-form-send-success"> Gracias! Tu mensaje ha sido enviado. </div>
-                  <div class="u-form-send-error u-form-send-message"> No se puede enviar su mensaje. Por favor, corrija los errores y vuelva a intentarlo. </div>
+                  <div class="u-form-send-error u-form-send-message"> No se puede enviar su mensaje. Por favor, corrija
+                    los errores y vuelva a intentarlo. </div>
                   <input type="hidden" value="" name="recaptchaResponse">
                   <input type="hidden" name="formServices" value="3bebeda603f2cda298e195c823859255">
                 </form>

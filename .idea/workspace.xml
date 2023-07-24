@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="133f48b6-13b2-41b7-8d03-a13a003f334d" name="Changes" comment="Imagenes">
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/Css/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/Css/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/Css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/Css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/src/Css/top.css" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/src/Css/top.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/templates/Footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/templates/Footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/templates/Opciones.html" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/templates/Opciones.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/templates/Top.html" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/templates/Top.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrosito-react/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/sabrosito-react/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sabrositoDjango/User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/sabrositoDjango/User/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
