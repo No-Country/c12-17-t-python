@@ -26,12 +26,13 @@ urlpatterns = [
     path('AddSession', views.login_view, name='login'),
     path('Signup', views.register, name='signup'),
     path('menu/', views.menu, name='menu'),
-    path('comidas', views.comidas, name='comidas'),
     path('info', views.info, name='info'),
     path('pagos', views.pagos, name='pagos'),
     path('perfil', views.perfilPrueba, name='perfil'),
     path('pedidos', views.pedidos, name='pedidos'),
 
+    #comidas
+    path('desayunos', views.desayunos, name='desayunos'),
 
     #URLS PAY
     path('Paypal/', include('paypal.standard.ipn.urls')),   
