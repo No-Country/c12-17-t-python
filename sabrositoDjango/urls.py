@@ -46,5 +46,10 @@ urlpatterns = [
     path('eliminar/<int:product_id>/', viewsCart.eliminar_producto, name="Del"),
     path('restar/<int:product_id>/', viewsCart.restar_producto, name="Sub"),
     path('limpiar/', viewsCart.limpiar_carrito, name="CLS"),
-    
+
+
+    #URLS DE PRODUCTOS
+    path('desayunos/', viewsCart.desayunos, name='desayunos'),
+    path('almuerzos/', viewsCart.almuerzos, name='almuerzos'),
+    path('bebidas/', viewsCart.jugos, name='bebidas'),
 ]

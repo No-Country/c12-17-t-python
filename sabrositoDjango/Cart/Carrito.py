@@ -13,7 +13,7 @@ class Carrito:
         id = str(product.id)    
         if request.method == 'GET':
             cantidad = request.GET.get('cantidad')
-            if cantidad is None or cantidad is 0 or cantidad is "":
+            if cantidad == None or cantidad == 0 or cantidad == "":
                 cantidad = 1
             precioCantidad = int(product.price) * int(cantidad)
     
@@ -32,7 +32,7 @@ class Carrito:
 
         else: 
             cantidad = request.POST['cantidad']
-            if cantidad is None or cantidad is 0 or cantidad is "":
+            if cantidad == None or cantidad == 0 or cantidad == "":
                 cantidad = 1
             precioCantidad = int(product.price) * int(cantidad)
     

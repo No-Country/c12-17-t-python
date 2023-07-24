@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from .models import Product
 
 # Create your views here.
 
@@ -32,3 +33,18 @@ def limpiar_carrito(request):
     carrito = Carrito(request)
     carrito.limpiar()
     return redirect("Tienda")
+
+
+# Views para enviar productos al front
+
+def desayunos(request):
+    productos = Product.objects.filter(category='Desayunos')
+    return render(request, 'Desayunos.html', {'productos': productos})
+
+def almuerzos(request):
+    productos = Product.objects.filter(category='Almuerzos')
+    return render(request, 'Almuerzos.html', {'productos': productos})
+
+def jugos(request):
+    productos = Product.objects.filter(category='Jugos')
+    return render(request, 'Jugos.html', {'productos': productos})
