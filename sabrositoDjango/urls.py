@@ -35,7 +35,7 @@ urlpatterns = [
     path('desayunos', views.desayunos, name='desayunos'),
 
     #URLS PAY
-    path('Paypal/', include('paypal.standard.ipn.urls')),   
+    path('Paypal/', include('paypal.standard.ipn.urls')),
     path('pago',viewsPago.home ,name='pago'),
     path('paypal-return',viewsPago.paypal_return ,name='paypal-return'),
     path('paypal-cancel',viewsPago.paypal_cancel ,name='paypal-cancel'),
@@ -53,4 +53,8 @@ urlpatterns = [
     path('desayunos/', viewsCart.desayunos, name='desayunos'),
     path('almuerzos/', viewsCart.almuerzos, name='almuerzos'),
     path('bebidas/', viewsCart.jugos, name='bebidas'),
+
+    path('desayunos/<slug:slug_text>/', viewsCart.desayunos, name="desayunos"),
+    path('almuerzos/<slug:slug_text>/', viewsCart.almuerzos, name='almuerzos'),
+    path('bebidas/<slug:slug_text>/', viewsCart.jugos, name='bebidas'),
 ]

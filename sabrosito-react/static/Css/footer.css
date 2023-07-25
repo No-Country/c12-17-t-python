@@ -1,0 +1,13 @@
+.logo-footer {
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 15rem;
+}
+
+@media (max-width: 900px){
+    .logo-footer{
+        position: relative;
+    }
+}

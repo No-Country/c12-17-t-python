@@ -1,8 +1,9 @@
 
 .u-section-1 {
-    background-image: url("../img/descarga.jpg");
+    background-image: url("../img/bg.jpg");
     background-position: 50% 50%;
-    min-height: 600px;
+    min-height: 50rem;
+    background-size: contain;
   }
   
   .u-section-1 .u-layout-wrap-1 {
@@ -90,14 +91,8 @@
       min-height: 100px;
     }
   
-    .u-section-1 .u-container-layout-1 {
-      padding-top: 60px;
-      padding-right: 150px;
-      padding-bottom: 30px;
-    }
-  
     .u-section-1 .u-image-1 {
-      min-height: 564px;
+      min-height: 50%;
     }
   }
   
@@ -113,7 +108,7 @@
     }
   
     .u-section-1 .u-image-1 {
-      min-height: 468px;
+      min-height: 50%;
     }
   
     .u-section-1 .u-container-layout-2 {
@@ -132,7 +127,8 @@
     }
   
     .u-section-1 .u-image-1 {
-      min-height: 342px;
+      min-height: 50%;
+      background-size: contain;
     }
   }.u-section-2 .u-sheet-1 {
     min-height: 177px;

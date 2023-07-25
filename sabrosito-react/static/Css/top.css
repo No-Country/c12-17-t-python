@@ -1,8 +1,38 @@
 .top-bar {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #751061;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.boton-inicio {
+  background-color: #751061;
+}
+
+.top {
+  position: absolute;
+  padding: 0.5rem 1.5rem;
+  right: 5%;
+  bottom: 0;
+  transform: translateY(50%);
+  margin: 2.5rem;
+  background-color: #751061;
+  border-radius: 1rem;
+}
+
+.btn-menu {
+  right: 10%;
+  margin: 2.5rem 4.5rem;
+}
+
+@media (max-width: 1000px) {
+  .boton-inicio{
+    opacity: 0%;
   }
+  .btn-menu{
+    opacity: 0%;
+  }
+}

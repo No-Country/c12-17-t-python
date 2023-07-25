@@ -1,9 +1,17 @@
 {% load static %}
 
 {% block footer %}
+<head>
+    <!--link rel="stylesheet" href="{% static '/Css/footer.css' %}" media="screen"-->
+    <link rel="stylesheet" href="static/Css/footer.css" media="screen">
+</head>
 
-<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-251b"><div class="u-clearfix u-sheet u-sheet-1">
-    <p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-</div></footer>
+<footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-251b" style="background-color: #751061;">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">© Copyright 2023. Todos los derechos reservados</p>
+        <img class="logo-footer" src="static/img/logo-footer.svg">
+    </div>
+</footer>
+
 
 {% endblock %}

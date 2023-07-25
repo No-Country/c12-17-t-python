@@ -1,3 +1,28 @@
+#titulo{
+  margin-left:25%;
+}
+
+
+@media (max-width: 1200px){
+  #titulo{
+      margin-left:3%;
+  }
+}
+
+@media (max-width: 990px){
+  #titulo{
+      
+      margin-left:0%;
+  }
+}
+
+@media (max-width: 764px){
+  #titulo{
+      
+      margin-left:15%;
+  }
+}
+
 .u-section-1 .u-sheet-1 {
   min-height: 400px;
 }.u-section-2 .u-sheet-1 {
@@ -87,11 +112,7 @@
     margin-left: 28px;
   }
 
-  .u-section-2 .u-form-1 {
-    width: 300px;
-    margin-right: 71px;
-    margin-left: -71px;
-  }
+ 
 }
 
 @media (max-width: 767px) {

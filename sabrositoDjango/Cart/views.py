@@ -37,14 +37,14 @@ def limpiar_carrito(request):
 
 # Views para enviar productos al front
 
-def desayunos(request):
-    productos = Product.objects.filter(category='Desayunos')
+def desayunos(request, slug_text):
+    productos = Product.objects.filter(category='Desayunos', slug=slug_text)
     return render(request, 'Desayunos.html', {'productos': productos})
 
-def almuerzos(request):
-    productos = Product.objects.filter(category='Comidas')
+def almuerzos(request, slug_text):
+    productos = Product.objects.filter(category='Comidas',slug=slug_text)
     return render(request, 'Almuerzos.html', {'productos': productos})
 
-def jugos(request):
-    productos = Product.objects.filter(category='Bebidas')
+def jugos(request, slug_text):
+    productos = Product.objects.filter(category='Bebidas', slug=slug_text)
     return render(request, 'Jugos.html', {'productos': productos})

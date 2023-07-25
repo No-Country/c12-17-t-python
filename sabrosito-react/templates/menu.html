@@ -4,15 +4,13 @@
 {% block body %}
 <head>
   <!--link rel="stylesheet" href="{% static '/Css/Menu.css' %}" media="screen"-->
-  <!--link rel="stylesheet" href="{% static '/Css/carrito.css' %}" media="screen"-->
   <link rel="stylesheet" href="static/Css/Menu.css" media="screen">
-  <link rel="stylesheet" href="static/Css/carrito.css" media="screen">
-
-
 </head>
 
-<section class="u-align-center u-clearfix u-section-1" id="sec-ce00">
-  <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+<!--Este section lo puedes eliminar, te ahorras lineas de codigo, solo es el codigo del fondo color gris y el titulo "Menu"-->
+
+<section class="u-align-center u-clearfix u-section-1" id="sec-ce00" style="margin: 1.5rem auto;">
+  <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"style="background-color: #D9D9D9;">
     <lt-highlighter class="lt-highlighter--grid-item" style="display: none; z-index: 1 !important;">
       <lt-div spellcheck="false" class="lt-highlighter__wrapper" style="width: 144px; height: 53px; transform: none !important; transform-origin: 72px 26.4px !important; zoom: 1 !important; margin-top: 62px; margin-left: 498px;">
         <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 144px; height: 55px;">
@@ -20,50 +18,38 @@
         </lt-div>
       </lt-div>
     </lt-highlighter>
-    <h1 class="u-text u-text-default u-text-1">Menu</h1>
+    <h1 class="u-titulo-menu" style="font-weight: 600;" >Menu</h1>
   </div>
 </section>
-<section class="u-clearfix u-section-2" id="sec-1c6d">
+
+
+
+
+<section class="u-clearfix u-section-2" >
   <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
     <div class="u-expanded-width u-list u-list-1">
       <div class="u-repeater u-repeater-1">
-        <div class="u-container-style u-image u-list-item u-repeater-item u-shading u-image-1" data-image-width="2000" data-image-height="1333">
-          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-            <lt-highlighter class="lt-highlighter--grid-item" style="display: none; z-index: 1 !important;">
-              <lt-div spellcheck="false" class="lt-highlighter__wrapper" style="width: 169px; height: 36px; transform: none !important; transform-origin: 84.4px 18px !important; zoom: 1 !important; margin-top: 300px; margin-left: 30px;">
-                <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 169px; height: 36px;"></lt-div>
-              </lt-div>
-            </lt-highlighter>
-            <h3 class="u-text u-text-default u-text-1">Desayunos</h3>
-            <p class="u-text u-text-default u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+        <div class="u-container-style u-image u-list-item u-repeater-item u-shading u-image-1" >
+          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1" id="cuadritos">
+            <img src="static/img/bg.jpg" style="width: 100%;">
+            <h3 class="u-text u-text-default u-text-1" id="cuadrito_texto">Desayunos</h3>
           </div>
         </div>
-        <div class="u-container-style u-image u-list-item u-repeater-item u-shading u-image-2" data-image-width="2000" data-image-height="1333">
-          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-            <lt-highlighter class="lt-highlighter--grid-item" style="display: none; z-index: 1 !important;">
-              <lt-div spellcheck="false" class="lt-highlighter__wrapper" style="width: 162px; height: 36px; transform: none !important; transform-origin: 80.8px 18px !important; zoom: 1 !important; margin-top: 300px; margin-left: 30px;">
-                <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 162px; height: 36px;"></lt-div>
-              </lt-div>
-            </lt-highlighter>
-            <h3 class="u-text u-text-default u-text-3">Almuerzos</h3>
-            <p class="u-text u-text-default u-text-4">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+        <div class="u-container-style u-image u-list-item u-repeater-item u-shading u-image-2">
+          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2 u-tarjeta cuadritos" id="cuadritos">
+            <img src="static/img/bg.jpg" style="width: 100%;">
+            <h3 class="u-text u-text-default u-text-3"id="cuadrito_texto">Almuerzos</h3>
           </div>
         </div>
-        <div class="u-container-style u-image u-list-item u-repeater-item u-shading u-image-3" data-image-width="2000" data-image-height="1333">
-          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-            <lt-highlighter class="lt-highlighter--grid-item" style="display: none; z-index: 1 !important;">
-              <lt-div spellcheck="false" class="lt-highlighter__wrapper" style="width: 124px; height: 36px; transform: none !important; transform-origin: 62px 18px !important; zoom: 1 !important; margin-top: 300px; margin-left: 30px;">
-                <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 124px; height: 36px;"></lt-div>
-              </lt-div>
-            </lt-highlighter>
-            <h3 class="u-text u-text-default u-text-5">Bebidas</h3>
-            <p class="u-text u-text-default u-text-6">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+        <div class="u-container-style u-image u-list-item u-repeater-item u-shading u-image-3">
+          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3" id="cuadritos">
+            <img src="static/img/bg.jpg" style="width: 100%;">
+            <h3 class="u-text u-text-default u-text-5" id="cuadrito_texto">Bebidas</h3>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 {% endblock %}

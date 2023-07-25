@@ -9,6 +9,7 @@ class Product(models.Model):
     description = models.TextField('Descripción', blank=True)
     category = models.CharField('Categoria', max_length=120)
     image = models.ImageField('Imagen', blank=True)
+    slug = models.SlugField(null=True, blank=True)
 # >>>>>>> a5a342e4edf9c9019a189430712b0365661231c7
 
     def __str__(self):
