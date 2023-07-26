@@ -51,12 +51,18 @@
               <article>
                 <p class="text-cantidad" style="display: flex; align-items: center;">
                   <span style="margin-top:0.5rem ;">Cantidad</span>
+
                   <div class="contadores" style="position: absolute;right: 0;top: 0;">
-                    <button type="button" class="contadores-boton-menos" style="margin:  0 1rem;">
-                      <img style="width: 1.5rem;transform: translateY(10%);" src="sabrosito-react/src/img/button-add.png" alt="disminucion">
+                    
+                    <button type="button" id="decre" class="decre contadores-boton-menos" style="margin:  0 1rem;">
+                      <img style="width: 1.5rem;transform: translateY(10%);" src="sabrosito-react/src/img/button-dec.png" alt="disminucion">
                     </button>
-                    <span class="contador-unidades" style="position: relative; top: -0.25rem;">0</span>
-                    <button type="button" class="contadores-boton-mas" style="margin:  0 1rem;">
+                    
+                    <span class="contador-unidades" style="position: relative; top: -0.25rem;"
+                      id="contar"
+                    >0</span>
+                    
+                    <button id="incre" type="button" class="incre contadores-boton-mas" style="margin:  0 1rem;">
                       <img style="width: 1.5rem;transform: translateY(10%);" src="sabrosito-react/src/img/button-add.png" alt="incremento">
                     </button>
                   </div>
@@ -146,4 +152,5 @@
   </div>
 </section>
 
+<script src="{% static '/js/contador.js' %}"></script>
 {% endblock %}
