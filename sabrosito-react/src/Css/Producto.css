@@ -87,10 +87,15 @@
   height: 100%;
 }
 
+.boton-informacion {
+  background-color: #751061;
+}
+
 @media (max-width: 1199px) {
   .u-section-1 .u-sheet-1 {
     min-height: 556px;
   }
+  
 
   .u-section-1 .u-product-1 {
     min-height: 435px;

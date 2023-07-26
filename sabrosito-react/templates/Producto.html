@@ -47,10 +47,28 @@
             <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
             <!--product_button--><!--options_json--><!--{"clickType":"add-to-cart","content":"Add to Cart"}--><!--/options_json-->
             <!--aca van los botones-->
+            <div class="botones-agregar-carrito" style="height: 3.5rem;">
+              <article>
+                <p class="text-cantidad" style="display: flex; align-items: center;">
+                  <span style="margin-top:0.5rem ;">Cantidad</span>
+                  <div class="contadores" style="position: absolute;right: 0;top: 0;">
+                    <button type="button" class="contadores-boton-menos" style="margin:  0 1rem;">
+                      <img style="width: 1.5rem;transform: translateY(10%);" src="sabrosito-react/src/img/button-add.png" alt="disminucion">
+                    </button>
+                    <span class="contador-unidades" style="position: relative; top: -0.25rem;">0</span>
+                    <button type="button" class="contadores-boton-mas" style="margin:  0 1rem;">
+                      <img style="width: 1.5rem;transform: translateY(10%);" src="sabrosito-react/src/img/button-add.png" alt="incremento">
+                    </button>
+                  </div>
+                </p>
+              </article>
 
+            </div>
+            <div class="botones" style="height: max-content;margin: 2.5rem; position: absolute;right: 0;">
+              <a class="boton-agregar" style="background-color: #751061;padding: 0.5rem;color: #fff;border-radius: 5rem;" href="#">Agregar al carrito</a>
+              <a class="boton-comprar" style="background-color: #751061;padding: 0.5rem;color: #fff;border-radius: 5rem;" href="#">Comprar</a>
 
-
-
+            </div><br>
 
             <div class="u-social-icons u-spacing-40 u-social-icons-1">
               <a class="u-social-url" target="_blank" href=""><span
