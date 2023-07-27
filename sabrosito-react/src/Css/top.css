@@ -28,6 +28,11 @@
   margin: 2.5rem 4.5rem;
 }
 
+.social{
+  width: 25px;
+  transform: translateY(20%);
+}
+
 @media (max-width: 1000px) {
   .boton-inicio{
     opacity: 0%;
