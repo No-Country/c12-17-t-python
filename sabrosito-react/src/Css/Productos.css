@@ -1,4 +1,9 @@
-
+#boton-volver-menu{
+  background-color: #751061;
+  color: #fff ;
+  padding: 0.5rem ;
+  border-radius: .2rem ;
+}
 
 .u-section-1 .u-sheet-1 {
   min-height: 632px;
