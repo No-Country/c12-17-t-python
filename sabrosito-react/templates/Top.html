@@ -2,6 +2,10 @@
 
 {% block top %}
 
+<head>
+  <link type="text/css" rel="stylesheet" href="{% static '/Css/busqueda.css' %}">
+</head>
+
 <header class="u-clearfix u-header u-header" id="sec-35f7">
   <div class="u-clearfix u-sheet u-sheet-1">
     <lt-highlighter style="display: none; z-index: 1 !important;">
@@ -12,8 +16,10 @@
     </lt-highlighter>
     <a href="" class="u-image u-logo u-image-1">
       <img src="sabrosito-react/src/img/logo-2.svg" class="u-logo-image u-logo-image-1" style="width: 10rem;">
-      <div class="barra-ubicacion" style="border-radius: 1.5rem; height: max-content; width: 200%;padding: 1rem;background-color: #751061;position: absolute;left:15rem;transform: translateY(-70%);">
-        <div id="barra-texto" style="display:flex;align-items: center; background-color:  #fff;width: 100%;height: max-content;padding: 2.5%;color: #751061;font-weight: 700 ;"><img src="sabrosito-react/src/img/logo-ubicacion.svg" alt="logo-ubicacion" style="margin-right: 1rem;"><span>Texto de ubicacion</span></div>
+      <div class="barra-ubicacion" >
+        <div class="barra-texto" >
+          <img class="img" src="sabrosito-react/src/img/logo-ubicacion.svg" alt="logo-ubicacion" style="margin-right: 1rem;">
+          <span class="span">Texto de ubicacion</span></div>
       </div>
     </a>
     <nav class="u-menu u-menu-hamburger u-offcanvas u-menu-1" data-responsive-from="XL" style="position: absolute;right: 2.5rem;">

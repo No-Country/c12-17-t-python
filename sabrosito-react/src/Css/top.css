@@ -1,24 +1,3 @@
-#barra-texto{
-  display:flex;
-  align-items: center; 
-  background-color:  #fff;
-  width: 100%;
-  height: max-content;
-  padding: 2.5%;
-  color: #751061;
-  font-weight: 700;
-}
-
-#barra-ubicacion{
-  border-radius: 1.5rem;
-  height: max-content; 
-  width: 200%;
-  padding: 1rem;
-  background-color: #751061;
-  position: absolute;
-  left:15rem;
-  transform: translateY(-70%);
-}
 .top-bar {
   background-color: #751061;
   color: #fff;
@@ -52,8 +31,10 @@
 @media (max-width: 1000px) {
   .boton-inicio{
     opacity: 0%;
+    display: none;
   }
   .btn-menu{
     opacity: 0%;
+    display: none;
   }
 }
