@@ -47,4 +47,7 @@
   .u-section-1 .u-checkout-1 {
     width: 340px;
   }
+  #imagen-pago{
+    display: none;
+  }
 }
