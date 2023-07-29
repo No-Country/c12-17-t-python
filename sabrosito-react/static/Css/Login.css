@@ -1,3 +1,5 @@
+
+
 #titulo{
   margin-left:25%;
 }
@@ -11,14 +13,14 @@
 
 @media (max-width: 990px){
   #titulo{
-      
+
       margin-left:0%;
   }
 }
 
 @media (max-width: 764px){
   #titulo{
-      
+
       margin-left:15%;
   }
 }
@@ -112,7 +114,7 @@
     margin-left: 28px;
   }
 
- 
+
 }
 
 @media (max-width: 767px) {

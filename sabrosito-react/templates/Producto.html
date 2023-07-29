@@ -1,13 +1,15 @@
 {% extends "Base.html" %}
 {% load static %}
 
+{% block meta%}
+<title>Sabrocito - Producto</title>
+{% endblock %}
+
 {% block body %}
 
 <head>
-  <!--link rel="stylesheet" href="{% static '/Css/Producto.css' %}" media="screen"-->
-  <!--link rel="stylesheet" href="{% static '/Css/Recomendados.css' %}" media="screen"-->
-  <link rel="stylesheet" href="static/Css/Producto.css" media="screen">
-  <link rel="stylesheet" href="static/Css/Recomendados.css" media="screen">
+  <link rel="stylesheet" href="{% static '/Css/Producto.css' %}" media="screen">
+  <link rel="stylesheet" href="{% static '/Css/Recomendados.css' %}" media="screen">
 </head>
 
 
@@ -15,44 +17,66 @@
   <div class="u-clearfix u-sheet u-valign-middle-lg u-sheet-1">
     <!--product--><!--product_options_json--><!--{"source":""}--><!--/product_options_json--><!--product_item-->
     <div class="u-container-style u-product u-product-1">
+      {% for p in producto %}
+      <form action="{% url 'agregar_al_carrito' p.id %}" method='POST'onsubmit="convertirSpanAInput(event)">
+        {% csrf_token %}
       <div class="u-container-layout u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-1">
         <!--product_image-->
         <img alt="" class="u-image u-image-default u-product-control u-image-1"
-          src="images/5660510982_7_1_16.jpg"><!--/product_image-->
+          src="{{ p.image.url }}" alt='Imagen we' ><!--/product_image-->
         <div
           class="u-align-left u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-1">
           <div class="u-container-layout u-container-layout-2"><!--product_title-->
             <h2 class="u-product-control u-text u-text-1">
-              <a class="u-product-title-link" href="#"><!--product_title_content-->Sample
-                Product<!--/product_title_content--></a>
+              <a class="u-product-title-link" style='text-align:center;'href="#"><!--product_title_content-->{{p.name}}<!--/product_title_content--></a>
             </h2><!--/product_title--><!--product_price-->
             <div class="u-product-control u-product-price u-product-price-1">
               <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
-                <div class="u-hide-price u-old-price" style="text-decoration: line-through !important;">
-                  <!--product_old_price_content-->$12<!--/product_old_price_content--></div>
-                <!--/product_old_price--><!--product_regular_price-->
+
                 <div class="u-price u-text-palette-2-base" style="font-size: 1.5rem; font-weight: 700;">
-                  <!--product_regular_price_content-->$9.95<!--/product_regular_price_content--></div>
+                  <!--product_regular_price_content-->${{ p.price}}<!--/product_regular_price_content--></div>
                 <!--/product_regular_price-->
               </div>
             </div><!--/product_price-->
             <lt-highlighter style="display: none; z-index: 1 !important;">
-              <lt-div spellcheck="false" class="lt-highlighter__wrapper"
-                style="width: 257px; height: 51px; transform: none !important; transform-origin: 128.5px 25.6px !important; zoom: 1 !important; margin-top: 20px;">
+              <lt-div spellcheck="false" class="lt-highlighter__wrapper"style="width: 257px; height: 51px; transform: none !important; transform-origin: 128.5px 25.6px !important; zoom: 1 !important; margin-top: 20px;">
                 <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 257px; height: 51px;">
-                  <canvas class="lt-highlighter__canvas" width="34" height="22"
-                    style="display: none; top: 2px; left: 169px;"></canvas>
+                  <canvas class="lt-highlighter__canvas" width="34" height="22"style="display: none; top: 2px; left: 169px;"></canvas>
                 </lt-div>
               </lt-div>
             </lt-highlighter>
-            <p class="u-text u-text-2">Texto de muestra. Haz click para seleccionar el elemento de Texto.</p>
+            <p class="u-text u-text-2">{{p.description}}</p>
             <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
             <!--product_button--><!--options_json--><!--{"clickType":"add-to-cart","content":"Add to Cart"}--><!--/options_json-->
             <!--aca van los botones-->
+            <div class="botones-agregar-carrito" style="height: 3.5rem;">
+              <article>
+                <p class="text-cantidad" style="display: flex; align-items: center;">
+                  <span style="margin-top:0.5rem ;" id='miSpan'>Cantidad</span>
+                    {% csrf_token %}
+                  <div class="contadores" style="position: absolute;right: 0;top: 0;">
+                    <button type="button" id="decre" class="decre contadores-boton-menos" style="margin:  0 1rem;">
+                      <img style="width: 1.5rem;transform: translateY(10%);" src="{% static '/img/button-dec.png' %}" alt="disminucion">
+                    </button>
+                    <input type="hidden" id="inputHidden" name="cantidad">
+                    <span class="contador-unidades" style="position: relative; top: -0.25rem;"
+                      id="contar">0</span>
 
+                    <button id="incre" type="button" class="incre contadores-boton-mas" style="margin:  0 1rem;">
+                      <img style="width: 1.5rem;transform: translateY(10%);" src="{% static '/img/button-add.png' %}" alt="incremento">
+                    </button>
+                  </div>
+                </p>
+              </article>
 
+            </div>
+            <div class="botones" style="height: max-content;margin: 2.5rem; position: absolute;right: 0;">
 
+              <a class="boton-agregar" style="background-color: #751061;padding: 0.5rem;color: #fff;border-radius: 5rem;" href="#"><input type='submit' style="background-color: #751061; border-style: none;" name="add_to_cart_menu" value='Agregar al carrito'></a>
 
+              <!--<a class="boton-comprar" style="background-color: #751061;padding: 0.5rem;color: #fff;border-radius: 5rem;" href="#"><input type='submit' style="background-color: #751061; border-style: none;" name="add_to_buy" value='Agregar y pagar'></a>-->
+
+            </div><br>
 
             <div class="u-social-icons u-spacing-40 u-social-icons-1">
               <a class="u-social-url" target="_blank" href=""><span
@@ -97,6 +121,9 @@
           </div>
         </div>
       </div>
+      </form>
+
+      {% endfor %}
     </div><!--/product_item--><!--/product-->
   </div>
 </section>
@@ -130,4 +157,6 @@
   </div>
 </section>
 
+<script src="{% static '/js/contador.js' %}"></script>
+<!--<script src="{% static '/js/span.js' %}"></script>-->
 {% endblock %}

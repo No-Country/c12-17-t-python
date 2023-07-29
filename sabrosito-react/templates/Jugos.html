@@ -1,10 +1,15 @@
 {% extends "Base.html"%}
 {% load static %}
-{% block body %}
 
+
+{% block meta%}
+<title>Sabrocito - Bebidas</title>
+{% endblock %}
+
+{% block body %}
 <head>
-  <!--link rel="stylesheet" href="{% static '/Css/Productos.css' %}" media="screen"-->
-  <link rel="stylesheet" href="static/Css/Productos.css" media="screen">
+    <link rel="stylesheet" href="{% static '/Css/Comida.css' %}" media="screen">
+    <!--link rel="stylesheet" href="static/Css/Comida.css" media="screen"-->
 </head>
 
 <section class="u-align-center u-clearfix u-section-1" id="sec-f7a8">
@@ -13,16 +18,22 @@
       u-border-no-left u-border-no-right u-border-no-top u-btn u-button-style u-none u-text-palette-1-base
       u-btn-1">Volver al
       menu</a><!--products--><!--products_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}--><!--/products_options_json-->
-    {% for product in productos %}
+
     <div class="u-products u-products-1">
 
       <div class="u-repeater u-repeater-1"><!--product_item-->
+        {% for product in productos %}
         <div class="u-align-left u-container-style u-products-item u-repeater-item"
           style="background-color: #ACACAC; margin: 1rem;">
           <div class="u-container-layout u-similar-container u-container-layout-4" style="padding: 0.1rem;">
             <!--product_image-->
+            {% if product.image %}
             <img alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-4"
-              src="{{ product.image }}"><!--/product_image--><!--product_title-->
+              src="{{ product.image.url }}"><!--/product_image--><!--product_title-->
+            {% else %}
+            <img alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-4"
+              src="{% static 'img/descarga_c.jpg' %}"><!--/product_image--><!--product_title-->
+            {% endif%}
             <h4 class="u-product-control u-text u-text-7">
               <a class="u-product-title-link" href="#"><!--product_title_content-->{{ product.name }}<!--/product_title_content--></a>
             </h4><!--/product_title--><!--product_price-->
@@ -32,24 +43,28 @@
                   <!--product_old_price_content-->$12<!--/product_old_price_content--></div>
                 <!--/product_old_price--><!--product_regular_price-->
                 <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;">
-                  <!--product_regular_price_content-->{{ product.price }}<!--/product_regular_price_content--></div>
+                  <!--product_regular_price_content-->${{ product.price }}<!--/product_regular_price_content--></div>
                 <!--/product_regular_price-->
               </div>
             </div><!--/product_price-->
-            <p class="u-text u-text-8">Sabores</p>
+            <p class="u-text u-text-8">{{ product.description }}</p>
             <!--product_button--><!--options_json--><!--{"clickType":"add-to-cart","content":"Add"}--><!--/options_json-->
-            {% csrf_token %}
-            <a href="{% url 'Add' value.producto_id %}"
+
+            <a href="{% url 'producto' product.name %}"
               class="u-border-2 u-border-grey-25 u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-body-color u-btn-5"><!--product_button_content--><img
                 src="static/img/button-add.svg"
                 style="width:2.25rem;"><!--/product_button_content--></a><!--/product_button-->
           </div>
         </div><!--/product_item-->
+        {% endfor %}
       </div>
-    </div><!--/products-->
-    {% endfor %}
+
+    </div>
+    <!--/products-->
+
   </div>
 </section>
+
 
 
 {% endblock %}

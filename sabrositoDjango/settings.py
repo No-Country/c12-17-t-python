@@ -62,7 +62,8 @@ TEMPLATES = [
         'DIRS': [
 
             #Path.joinpath(BASE_DIR, 'sabrosito-react/build)'
-            Path.joinpath(BASE_DIR, 'sabrosito-react/templates')
+            Path.joinpath(BASE_DIR, 'sabrosito-react/templates'),
+
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -136,8 +137,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-#STATIC_URL = 'sabrosito-react/src/'
-STATIC_URL = 'sabrosito-react/static/'
+STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'/sabrosito-react/media')
+
+#STATIC_URL = 'sabrosito-react/static/'
 
 #STATICFILES_DIRS = (
  #   Path.joinpath(BASE_DIR, 'sabrosito-react/src'),
@@ -146,8 +152,8 @@ STATIC_URL = 'sabrosito-react/static/'
 #STATIC_ROOT=os.path.join(BASE_DIR,'sabrosito-react/src')
 #STATICFILES_DIRS = (os.path.join(BASE_DIR, 'sabrosito-react/src'),)
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'sabrosito-react/static'),)
-
+#STATICFILES_DIRS = (os.path.join(BASE_DIR, 'sabrosito-react/static'), os.path.join(BASE_DIR, 'c12-17-t-python/sabrosito-react/static'))
+STATIC_DIR = os.path.join(BASE_DIR,'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -156,7 +162,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGOUT_REDIRECT_URL = 'AddSession'
 
-LOGIN_URL = 'AddSession'
+LOGIN_URL = 'login'
 
 PAYPAL_TEST = True
 

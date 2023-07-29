@@ -1,50 +1,96 @@
 from django.shortcuts import render, redirect
 from .models import Product
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 from sabrositoDjango.Cart.Carrito import Carrito
-from .models import Product
 
-
+@login_required
 def tienda(request):
     productos = Product.objects.all()
     return render(request, "02_tienda.html", {'productos':productos})
 
+@login_required
+def agregar_al_carritoNoFuncionoBien(request, product_id):
+    if 'add_to_cart_menu':
+        producto = Product.objects.get(id=product_id)
+        carrito = Carrito(request)
+        carrito.agregar(producto, request)
+        return redirect('menu')  # Redirige a la página del menú
+    elif 'add_to_cart_payment':
+        producto = Product.objects.get(id=product_id)
+        carrito = Carrito(request)
+        carrito.agregar(producto, request)
+        return redirect('pagos')
+
+@login_required
+def agregar_al_carrito(request, product_id):
+
+        redirect_page = request.POST.get('add_to_cart_menu')
+
+        producto = Product.objects.get(id=product_id)
+        carrito = Carrito(request)
+        carrito.agregar(producto, request)
+        return redirect('menu') if redirect_page else redirect('pagos')
+
+
+@login_required
 def agregar_producto(request, product_id):
     carrito = Carrito(request)
     producto = Product.objects.get(id=product_id)
     carrito.agregar(producto,request)
-    return redirect("Tienda")
+    return redirect("menu")
 
+
+
+@login_required
 def eliminar_producto(request, product_id):
     carrito = Carrito(request)
     producto = Product.objects.get(id=product_id)
     carrito.eliminar(producto)
-    return redirect("Tienda")
-
+    return redirect("menu")
+@login_required
 def restar_producto(request, product_id):
     carrito = Carrito(request)
     producto = Product.objects.get(id=product_id)
     carrito.restar(producto)
-    return redirect("Tienda")
-
+    return redirect("menu")
+@login_required
 def limpiar_carrito(request):
     carrito = Carrito(request)
     carrito.limpiar()
-    return redirect("Tienda")
+    return redirect("menu")
 
 
 # Views para enviar productos al front
-
-def desayunos(request, slug_text):
-    productos = Product.objects.filter(category='Desayunos', slug=slug_text)
+@login_required
+def desayunos(request):
+    productos = Product.objects.filter(category='Desayunos')
     return render(request, 'Desayunos.html', {'productos': productos})
 
-def almuerzos(request, slug_text):
-    productos = Product.objects.filter(category='Comidas',slug=slug_text)
+@login_required
+def almuerzos(request):
+    productos = Product.objects.filter(category='Comidas')
     return render(request, 'Almuerzos.html', {'productos': productos})
 
-def jugos(request, slug_text):
-    productos = Product.objects.filter(category='Bebidas', slug=slug_text)
+@login_required
+def jugos(request):
+    productos = Product.objects.filter(category='Bebidas')
     return render(request, 'Jugos.html', {'productos': productos})
+
+
+# Producto que el usuario elija
+@login_required
+def buscarUnProducto(request, product_name: str):
+    producto = Product.objects.filter(name=product_name)
+    return render(request, 'Producto.html', {'producto': producto})
+
+
+# Agregar un producto y pagar
+@login_required
+def agregar_y_pagar(request, product_id):
+    carrito = Carrito(request)
+    producto = Product.objects.get(id=product_id)
+    carrito.agregar(producto,request)
+    return redirect("pagos")

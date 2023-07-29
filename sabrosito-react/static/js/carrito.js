@@ -7,7 +7,8 @@ btnCart.addEventListener('click', () => {
 	containerCartProducts.classList.toggle('hidden-cart');
 });
 
-/* ========================= */
+/*
+/* =========================
 const cartInfo = document.querySelector('.cart-product');
 const rowProduct = document.querySelector('.row-product');
 
@@ -98,7 +99,7 @@ const showHTML = () => {
             <div class="info-cart-product">
                 <span class="cantidad-producto-carrito">${product.quantity}</span>
                 <p class="titulo-producto-carrito">${product.title}</p>
-                <span class="precio-producto-carrito">${product.price}</span>
+                <span class="precio-producto-carrito">${product.transform: translateY(-50%);}</span>
             </div>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -126,3 +127,4 @@ const showHTML = () => {
 	valorTotal.innerText = `$${total}`;
 	countProducts.innerText = totalOfProducts;
 };
+*/

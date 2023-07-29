@@ -7,12 +7,13 @@ from django.conf import settings
 from paypal.standard.forms import PayPalPaymentsForm
 from ..Cart import context_processor
 from sabrositoDjango.Cart.Carrito import Carrito
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 
-
-def home(request): 
+@login_required
+def pago(request):
      context =context_processor.total_carrito(request)
      host = request.get_host()
      paypal_dict = {
@@ -24,14 +25,13 @@ def home(request):
           'notify_url': f'http://{host}{reverse("paypal-ipn")}',
           'return_url': f'http://{host}{reverse("paypal-return")}',
           'cancel_return': f'http://{host}{reverse("paypal-cancel")}',
-
      }
+
      form = PayPalPaymentsForm(initial=paypal_dict)
      context = {'form': form}
-     return render(request, 'MiTemplateDePago.html', context)
+     return render(request, 'pagos.html', context)
 
-
-
+@login_required
 def paypal_return(request):
      messages.success(request, 'Tu pago fue realizado exitosamente!')
 
@@ -69,9 +69,9 @@ def paypal_return(request):
      carrito.limpiar()
 
 
-     return redirect('pago')
+     return redirect('menu')
 
-
+@login_required
 def paypal_cancel(request):
      messages.error(request, 'Tu orden fue cancelada')
-     return redirect('pago')
+     return redirect('pagos')

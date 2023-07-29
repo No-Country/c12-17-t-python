@@ -2,6 +2,13 @@
 
 {% block top %}
 
+<head>
+    <link rel="stylesheet" href="{% static '/Css/logo.css' %}" media="screen">
+    <link type="text/css" rel="stylesheet" href="{% static '/Css/busqueda.css' %}">
+    <link rel="stylesheet" href="{% static '/Css/modal.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static '/Css/modalCarrito.css' %}" media="screen">
+</head>
+
 <header class="u-clearfix u-header u-header" id="sec-35f7">
   <div class="u-clearfix u-sheet u-sheet-1">
     <lt-highlighter style="display: none; z-index: 1 !important;">
@@ -10,12 +17,21 @@
         <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 40px; height: 26px;"></lt-div>
       </lt-div>
     </lt-highlighter>
-    <a href="" class="u-image u-logo u-image-1">
-      <img src="static/img/logo-2.svg" class="u-logo-image u-logo-image-1" style="width: 10rem;">
+    <a href="{% url 'index'%}" class="u-image u-logo u-image-1">
+      <img src="{% static '/img/logo-2.svg' %}" class="u-logo-image u-logo-image-1" id='logo'>
+      <div class="barra-ubicacion divUbi" style="z-index: 3;" id='divUbi'>
+        <div class="barra-texto" >
+          <img class="img" src="{% static '/img/logo-ubicacion.svg' %}" alt="logo-ubicacion" style="margin-right: 1rem;">
+          <span class="span">Cll sabrocito 93</span></div>
+      </div>
     </a>
+
+
     <nav class="u-menu u-menu-hamburger u-offcanvas u-menu-1" data-responsive-from="XL" style="position: absolute;right: 2.5rem;">
       <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px; font-weight: 700;">
-        <a class="u-button-style u-custom-border u-custom-border-color u-custom-borders u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
+        <a
+        style="transform: translateY(-80%);"
+        class="u-button-style u-custom-border u-custom-border-color u-custom-borders u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-text-active-color u-custom-text-color u-custom-text-hover-color u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base"
           href="#">
           <svg class="u-svg-link" viewBox="0 0 24 24">
             <use xlink:href="#menu-hamburger"></use>
@@ -34,19 +50,19 @@
         <ul class="u-nav u-spacing-20 u-unstyled u-nav-1">
           <li class="u-nav-item"><a
               class="u-button-style u-nav-link u-text-active-palette-3-base u-text-grey-90 u-text-hover-palette-3-base"
-              href="Menu.html" style="padding: 10px;">Menu</a>
+              href="{% url 'menu' %}" style="padding: 10px;">Menu</a>
           </li>
           <li class="u-nav-item"><a
               class="u-button-style u-nav-link u-text-active-palette-3-base u-text-grey-90 u-text-hover-palette-3-base"
-              href="Login2.html" style="padding: 10px;">Login</a>
+              href="{% url 'login' %}" style="padding: 10px;">Login</a>
           </li>
           <li class="u-nav-item"><a
               class="u-button-style u-nav-link u-text-active-palette-3-base u-text-grey-90 u-text-hover-palette-3-base"
-              href="Registro.html" style="padding: 10px;">Registro</a>
+              href="{% url 'signup' %}" style="padding: 10px;">Registro</a>
           </li>
           <li class="u-nav-item"><a
               class="u-button-style u-nav-link u-text-active-palette-3-base u-text-grey-90 u-text-hover-palette-3-base"
-              href="Casa.html" style="padding: 10px;">Casa</a>
+              href="{% url 'index' %}" style="padding: 10px;">Casa</a>
           </li>
         </ul>
       </div>
@@ -59,8 +75,13 @@
               </li>
               <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'menu' %}">Menu</a>
               </li>
-              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'login' %}">Iniciar sesion</a>
+              {% if not user.is_authenticated %}
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'login' %}">Iniciar Sesion</a>
               </li>
+              {% else %}
+              <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'cerrarsesion' %}">Cerrar Sesion</a>
+              </li>
+              {% endif %}
               <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'signup' %}">Registro</a>
               </li>
             </ul>
@@ -78,6 +99,266 @@
 
     </div>
     </div>
+<br>
+    <!--
+
+    Carrito prros
+
+    <div class="container-icon">
+      <div class="container-cart-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon-cart"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+        {% if request.session.carrito.items %}
+        {% for key, value in request.session.carrito.items %}
+            <div class="count-products">
+              <span id="contador-productos">{{value.cantidad}}</span>
+            </div>
+        {% endfor %}
+        {% else %}
+            <div class="count-products">
+              <span id="contador-productos">0</span>
+            </div>
+        {% endif %}
+      </div>
+
+    aca va la parte del session
+
+      <div class="container-cart-products hidden-cart">
+        <div class="row-product hidden">
+          <div class="cart-product">
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-close"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+
+
+        {% if request.session.carrito.items %}
+        {% for key, value in request.session.carrito.items %}
+            <div class="info-cart-product">
+              <span class="cantidad-producto-carrito">{{value.cantidad}}</span>
+              <p class="titulo-producto-carrito">{{value.nombre}}</p>
+              <span class="precio-producto-carrito">{{value.precio}}</span>
+            </div>
+
+        {% endfor %}
+        {% endif %}
+          </div>
+        </div>
+
+
+        <div class="cart-total hidden">
+          <h3>Total:</h3>
+          <span class="total-pagar">{{total_carrito}}</span>
+          <a href="{% url 'pagos'%}">Prueba</a>
+        </div>
+            <p class="cart-empty">El carrito está vacío</p>
+        <a href="{% url 'pagos'%}">Ir a pagar</a>
+        </div>
+
+    </div>
+
+      -->
+
+
+
+    <!--Carrito prros-->
+
+    <!--div class="container-icon">
+      <div class="container-cart-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon-cart"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+        {% if request.session.carrito.items %}
+        {% for key, value in request.session.carrito.items %}
+            <div class="count-products">
+              <span id="contador-productos">{{value.cantidad}}</span>
+            </div>
+        {% endfor %}
+        {% else %}
+            <div class="count-products">
+              <span id="contador-productos">0</span>
+            </div>
+        {% endif %}
+      </div>
+
+    <!--aca va la parte del session
+
+      <div class="container-cart-products hidden-cart">
+        <div class="row-product hidden">
+          <div class="cart-product">
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="icon-close"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+
+
+        {% if request.session.carrito.items %}
+        {% for key, value in request.session.carrito.items %}
+            <div class="info-cart-produc">
+                <span class="cantidad-producto-carrit">{{value.cantidad}}</span>
+                <p class="titulo-producto-carrit">{{value.nombre}}</p>
+                <span class="precio-producto-carrit">{{value.precio}}</span>
+            </div>
+            <div class="cart-total hidden">
+                <h3>Total:</h3>
+                <span class="total-pagar">{{total_carrito}}</span>
+                <a href="{% url 'pagos'%}">Prueba</a>
+            </div>
+        {% endfor %}
+
+        {% else %}
+            <p class="cart-empty">El carrito está vacío</p>
+            <a href="{% url 'pagos'%}">Ir a pagar</a>
+        {% endif %}
+          </div>
+        </div>
+
+        </div>
+
+    <!--/div>-->
+
+
+
+<!--Nuevo modal familia-->
+
+<div class="container-icon" id='carritoprros'>
+      <div class="container-cart-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon-cart"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+          />
+        </svg>
+      </div>
+</div>
+
+<section class="modal_carrito" style="z-index: 3;">
+  <div class="modal__container__carrito">
+    <a href="" class="modal__close__carrito">Cerrar</a>
+    <!--<p>Aca va la estructura prros</p>-->
+
+    <div>
+    {% if request.session.carrito.items %}
+    {% for key, value in request.session.carrito.items %}
+
+    <div style="display: flex;">
+        <div style="padding: 0 5px;">
+            <p>
+                {{value.cantidad}}
+            </p>
+        </div>
+
+        <div style="padding: 0 5px;">
+            <p style="color: #808080;">
+                {{value.nombre}}
+            </p>
+        </div>
+
+        <div style="padding: 0 5px;">
+            <p>
+                ${{value.total}}
+            </p>
+        </div>
+
+        <div style="padding: 0 5px; margin-top: 20px">
+            <a style="color: #721422; font-weight: bold;" href="{% url 'Del' value.producto_id %}">X</a>
+        </div>
+    </div>
+    <hr>
+
+    {% endfor %}
+    <div class="contenedorBoton">
+       <a class= "botonDePago" href="{% url 'pagos'%}">Pagar ${{total_carrito}}</a>
+    </div>
+
+
+    {% else %}
+    <div>
+        <p>
+            No existen productos en el carrito
+        </p>
+    </div>
+
+    {% endif %}
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!--Modal de ubicacion no lo cambien >:v-->
+
+<section class="modal" style="z-index: 3;">
+  <div class="modal__container">
+    <a href="" class="modal__close">Cerrar</a>
+    <h2 class="modal__title">Ubicacion del restaurante</h2>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63619.73116557821!2d-74.13291392987465!3d4.7295100828102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f84fb3a1b2343%3A0x659550454c263a6c!2sMcDonald&#39;s!5e0!3m2!1sen!2sco!4v1689877648950!5m2!1sen!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  </div>
+</section>
+
+
+
+
   </div>
 </header>
+<script src="{% static 'js/maps.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
 {% endblock %}

@@ -1,4 +1,4 @@
-const openModal = document.querySelector(".btn-ubi")
+const openModal = document.querySelector(".divUbi")
 const modal = document.querySelector(".modal")
 const closeModal = document.querySelector(".modal__close")
 

@@ -1,0 +1,55 @@
+.barra-ubicacion {
+    border-radius: 1.5rem;
+    height: max-content;
+    width: 100%;
+    padding: .3rem;
+    background-color: #751061;
+    position: absolute;
+    left: 15rem;
+    transform: translateY(-120%);
+}
+
+.barra-texto {
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    width: 100%;
+    height: max-content;
+    padding: 2.5%;
+    color: #751061;
+    font-weight: 700;
+}
+
+
+@media (max-width: 740px){
+    .barra-ubicacion{
+        width: 30px;
+        background-color: #fff;
+        transform: translateY(-85%);
+    }
+
+    .span{
+        display: none;
+        opacity: 0%;
+    }
+    .img{
+        transform: translateY(-85%);
+    }
+}
+
+@media (max-width: 400px){
+    .barra-ubicacion{
+        width: 30px;
+        display: none;
+        opacity: 0%;
+    }
+    .img{
+        display: none;
+        opacity: 0%;
+    }
+    .barra-texto{
+        display: none;
+        opacity: 0%;
+    }
+}

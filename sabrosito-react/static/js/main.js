@@ -1,14 +1,15 @@
-const openModal = document.querySelector(".botonPrueba")
-const modal = document.querySelector(".modal")
-const closeModal = document.querySelector(".modal__close")
+const openModalCarrito = document.querySelector(".container-icon")
+const modalCarrito = document.querySelector(".modal_carrito")
+const closeModalCarrito = document.querySelector(".modal__close__carrito")
 
 
-openModal.addEventListener('click', (e)=>{
+openModalCarrito.addEventListener('click', (e)=>{
+    console.log("Hola mundo")
     e.preventDefault()
-    modal.classList.add("modal--show")
+    modalCarrito.classList.add("modal__carrito--show")
 })
 
-closeModal.addEventListener('click', (e)=>{
+closeModalCarrito.addEventListener('click', (e)=>{
     e.preventDefault()
-    modal.classList.remove("modal--show")
+    modalCarrito.classList.remove("modal__carrito--show")
 })

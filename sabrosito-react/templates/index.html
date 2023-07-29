@@ -1,9 +1,17 @@
 {% extends "Base.html"%}
 {% load static %}
+
+{% block meta%}
+<title>Sabrocito - Inicio</title>
+{% endblock %}
+
+
 {% block body %}
 <head>
-  <!--link type="text/css" rel="stylesheet" href="{% static '/Css/main.css' %}"-->
-  <link type="text/css" rel="stylesheet" href="static/Css/main.css">
+  <link type="text/css" rel="stylesheet" href="{% static '/Css/main.css' %}">
+  <link type="text/css" rel="stylesheet" href="{% static '/Css/galeria.css' %}">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <!--link type="text/css" rel="stylesheet" href="static/Css/main.css"-->
 </head>
 <section class="u-clearfix u-image u-valign-middle-lg u-valign-middle-md u-valign-middle-sm u-valign-middle-xs u-section-1" id="carousel_0d8f" data-image-width="1000" data-image-height="600">
   <div class="u-clearfix u-layout-wrap u-layout-wrap-1">
@@ -11,10 +19,10 @@
       <div class="u-layout-row">
         <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-19 u-layout-cell-1">
           <div class="u-container-layout u-container-layout-1">
-            <h1 class="u-text u-text-1"> We create <span style="font-weight: 700;">online shops</span>
+            <h1 class="u-text u-text-1"> <span style="font-weight: 700;">Sabrocito</span>
             </h1>
-            <p class="u-text u-text-2"> Accumsan in nisl nisi scelerisque. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Maecenas ultricies mi eget mauris pharetra et ultrices neque. </p>
-            <a href="" class="u-active-black u-border-none u-btn u-btn-round u-button-style u-custom-font u-font-lato u-hover-black u-palette-3-base u-radius-10 u-btn-1">read more</a>
+            <p class="u-text u-text-2"> En Sabrocito, te ofrecemos una experiencia culinaria única y sabrosa. Nuestro objetivo es deleitar tus sentidos y satisfacer tus antojos con una amplia selección de platos preparados con amor y cuidado. </p>
+            <a href="{% url 'menu'%}" class="u-active-black u-border-none u-btn u-btn-round u-button-style u-custom-font u-font-lato u-hover-black u-palette-3-base u-radius-10 u-btn-1">Ver Menu</a>
           </div>
         </div>
         <div class="u-container-style u-image u-layout-cell u-right-cell u-size-41 u-image-1" data-image-width="1000" data-image-height="600">
@@ -24,6 +32,7 @@
     </div>
   </div>
 </section>
+
 <section class="u-align-center u-clearfix u-section-2" id="sec-9992">
   <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
     <lt-highlighter class="lt-highlighter--grid-item" style="display: none; z-index: 1 !important;">
@@ -34,33 +43,113 @@
     <h1 class="u-text u-text-default u-text-1">Ofertas</h1>
   </div>
 </section>
-<section class="u-carousel u-slide u-block-9875-1" id="carousel_826f" data-interval="5000" data-u-ride="carousel">
-  <ol class="u-absolute-hcenter u-carousel-indicators u-block-9875-2">
-    <li data-u-target="#carousel_826f" class="u-active u-grey-30" data-u-slide-to="0"></li>
-  </ol>
-  <div class="u-carousel-inner" role="listbox">
-    <div class="u-active u-align-center u-carousel-item u-clearfix u-image u-shading u-section-3-1" src="" data-image-width="256" data-image-height="256">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h1 class="u-text u-text-default u-title u-text-1">Sample Headline</h1>
-        <p class="u-large-text u-text u-text-variant u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+
+
+<div class=""><div class="body">
+<section id="tranding">
+
+  <div class="container">
+    <div class="swiper tranding-slider">
+      <div class="swiper-wrapper">
+        <!-- Slide-start -->
+        <div class="swiper-slide tranding-slide">
+          <div class="tranding-slide-img">
+            <img src="{% static 'img/tranding-food-1.png'%}" alt="Tranding">
+          </div>
+          <div class="tranding-slide-content">
+            <div class="tranding-slide-content-bottom">
+              <h2 class="food-name">
+                Special Pizza $10
+              </h2>
+              <h3 class="food-rating">
+                <span>4.5</span>
+                <div class="rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+              </h3>
+            </div>
+          </div>
+
+        </div>
+        <!-- Slide-end -->
+        <!-- Slide-start -->
+
+        <div class="swiper-slide tranding-slide">
+          <div class="tranding-slide-img">
+            <img src="{% static 'img/tranding-food-6.png'%}" alt="Tranding">
+          </div>
+          <div class="tranding-slide-content">
+
+            <div class="tranding-slide-content-bottom">
+              <h2 class="food-name">
+                Vanilla cake $10
+              </h2>
+              <h3 class="food-rating">
+                <span>4.5</span>
+                <div class="rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <!-- Slide-end -->
+        <!-- Slide-start -->
+        <div class="swiper-slide tranding-slide">
+          <div class="tranding-slide-img">
+            <img src="{% static 'img/tranding-food-7.png'%}" alt="Tranding">
+          </div>
+          <div class="tranding-slide-content">
+
+            <div class="tranding-slide-content-bottom">
+              <h2 class="food-name">
+                Straw Cake $10
+              </h2>
+              <h3 class="food-rating">
+                <span>4.5</span>
+                <div class="rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <!-- Slide-end -->
       </div>
+
+      <div class="tranding-slider-control">
+        <div class="swiper-button-prev slider-arrow">
+          <ion-icon name="arrow-back-outline"></ion-icon>
+        </div>
+        <div class="swiper-button-next slider-arrow">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
     </div>
   </div>
-  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-text-grey-30 u-block-9875-3" href="#carousel_826f" role="button" data-u-slide="prev">
-    <span aria-hidden="true">
-      <svg class="u-svg-link" viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
-                c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
-    </span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-text-grey-30 u-block-9875-4" href="#carousel_826f" role="button" data-u-slide="next">
-    <span aria-hidden="true">
-      <svg class="u-svg-link" viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
-                c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
-    </span>
-    <span class="sr-only">Siguiente</span>
-  </a>
 </section>
+</div></div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script src="{% static 'js/script.js' %}"></script>
+
+
 
 
 {% endblock %}

@@ -1,10 +1,14 @@
 {% extends "Base.html" %}
 {% load static %}
 
+{% block meta%}
+<title>Sabrocito - Menu</title>
+{% endblock %}
+
 {% block body %}
 <head>
-  <!--link rel="stylesheet" href="{% static '/Css/Menu.css' %}" media="screen"-->
-  <link rel="stylesheet" href="static/Css/Menu.css" media="screen">
+  <link rel="stylesheet" href="{% static '/Css/Menu.css' %}" media="screen">
+  <!--link rel="stylesheet" href="static/Css/Menu.css" media="screen"-->
 </head>
 
 <!--Este section lo puedes eliminar, te ahorras lineas de codigo, solo es el codigo del fondo color gris y el titulo "Menu"-->
@@ -31,20 +35,20 @@
       <div class="u-repeater u-repeater-1">
         <div class="u-container-style u-image u-list-item u-repeater-item u-shading u-image-1" >
           <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1" id="cuadritos">
-            <img src="static/img/bg.jpg" style="width: 100%;">
-            <h3 class="u-text u-text-default u-text-1" id="cuadrito_texto">Desayunos</h3>
+            <img src="{% static '/img/bg.jpg' %}" style="width: 100%;">
+            <a href="{% url 'desayunos'%}"><h3 class="u-text u-text-default u-text-1" id="cuadrito_texto">Desayunos</h3></a>
           </div>
         </div>
         <div class="u-container-style u-image u-list-item u-repeater-item u-shading u-image-2">
           <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2 u-tarjeta cuadritos" id="cuadritos">
-            <img src="static/img/descarga_c.jpg" style="width: 100%;">
-            <h3 class="u-text u-text-default u-text-3"id="cuadrito_texto">Almuerzos</h3>
+            <img src="{% static '/img/descarga_c.jpg' %}" style="width: 100%;">
+            <a href="{% url 'almuerzos'%}"><h3 class="u-text u-text-default u-text-3"id="cuadrito_texto">Almuerzos</h3></a>
           </div>
         </div>
         <div class="u-container-style u-image u-list-item u-repeater-item u-shading u-image-3">
           <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3" id="cuadritos">
-            <img src="static/img/bg.jpg" style="width: 100%;">
-            <h3 class="u-text u-text-default u-text-5" id="cuadrito_texto">Bebidas</h3>
+            <img src="{% static '/img/bg.jpg' %}" style="width: 100%;">
+            <a href="{% url 'bebidas'%}"><h3 class="u-text u-text-default u-text-5" id="cuadrito_texto">Bebidas</h3></a>
           </div>
         </div>
       </div>

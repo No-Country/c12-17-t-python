@@ -27,34 +27,38 @@ urlpatterns = [
     path('Signup', views.register, name='signup'),
     path('menu', views.menu, name='menu'),
     path('info', views.info, name='info'),
-    path('pagos', views.pagos, name='pagos'),
     path('perfil', views.perfilPrueba, name='perfil'),
     path('pedidos', views.pedidos, name='pedidos'),
 
-    #comidas
-    path('desayunos', views.desayunos, name='desayunos'),
 
     #URLS PAY
     path('Paypal/', include('paypal.standard.ipn.urls')),
-    path('pago',viewsPago.home ,name='pago'),
+    path('pagos/',viewsPago.pago ,name='pagos'),
     path('paypal-return',viewsPago.paypal_return ,name='paypal-return'),
     path('paypal-cancel',viewsPago.paypal_cancel ,name='paypal-cancel'),
 
 
     #URLS DEL CARRITO
-    path('tienda/', viewsCart.tienda, name="Tienda"),
-    path('agregar/<int:product_id>/', viewsCart.agregar_producto, name="Add"),
+    path('tienda', viewsCart.tienda, name="Tienda"),
+    #path('agregar/<int:product_id>/', viewsCart.agregar_producto, name="Add"),
     path('eliminar/<int:product_id>/', viewsCart.eliminar_producto, name="Del"),
     path('restar/<int:product_id>/', viewsCart.restar_producto, name="Sub"),
     path('limpiar/', viewsCart.limpiar_carrito, name="CLS"),
+    #AGREGAR Y PAGAR
+    #path('agregarypagar/<int:product_id>/', viewsCart.agregar_y_pagar, name="addandpay"),
 
 
     #URLS DE PRODUCTOS
-    path('desayunos/', viewsCart.desayunos, name='desayunos'),
-    path('almuerzos/', viewsCart.almuerzos, name='almuerzos'),
-    path('bebidas/', viewsCart.jugos, name='bebidas'),
+    path('desayunos', viewsCart.desayunos, name='desayunos'),
+    path('almuerzos', viewsCart.almuerzos, name='almuerzos'),
+    path('bebidas', viewsCart.jugos, name='bebidas'),
 
-    path('desayunos/<slug:slug_text>/', viewsCart.desayunos, name="desayunos"),
-    path('almuerzos/<slug:slug_text>/', viewsCart.almuerzos, name='almuerzos'),
-    path('bebidas/<slug:slug_text>/', viewsCart.jugos, name='bebidas'),
+    #prueba
+    path('agregar/<int:product_id>/', viewsCart.agregar_producto, name="agregar_al_carrito"),
+
+    #URL para buscar el producto que elija el usuario
+    path('producto/<str:product_name>', viewsCart.buscarUnProducto, name='producto'),
+
+    #LOGOUT
+    path('cerrarsesion', views.cerrarsesion, name="cerrarsesion"),
 ]

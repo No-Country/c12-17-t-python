@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
-from sabrositoDjango.utils import unique_slug_generator
-from django.db.models.signals import pre_save
+
+
 # Create your models here.
 
 class Product(models.Model):
@@ -10,7 +10,7 @@ class Product(models.Model):
     description = models.TextField('Descripción', blank=True)
     category = models.CharField('Categoria', max_length=120)
     image = models.ImageField('Imagen', blank=True)
-    slug = models.SlugField(null=True, blank=True)
+
 # >>>>>>> a5a342e4edf9c9019a189430712b0365661231c7
 
     def __str__(self):
@@ -36,9 +36,3 @@ class Product_Order(models.Model):
 
 # >>>>>>> a5a342e4edf9c9019a189430712b0365661231c7
 
-
-def slug_generator(sender, instance, *args, **kwargs):
-    if not instance.slug:
-        instance.slug = unique_slug_generator(instance)
-
-pre_save.connect(slug_generator, sender=Product)

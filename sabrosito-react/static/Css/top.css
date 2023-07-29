@@ -10,6 +10,12 @@
 
 .boton-inicio {
   background-color: #751061;
+
+}
+
+.social{
+  width: 25px;
+  transform: translateY(20%);
 }
 
 .top {
@@ -31,8 +37,10 @@
 @media (max-width: 1000px) {
   .boton-inicio{
     opacity: 0%;
+    display: none;
   }
   .btn-menu{
     opacity: 0%;
+    display: none;
   }
 }

@@ -48,3 +48,15 @@
     width: 340px;
   }
 }
+
+
+.comerSabrosito {
+    width: 90%;
+    height: 90%;
+    background-image: url('/home/sabrocito/c12-17-t-python/sabrosito-react/static/img/sabrositoPagoComer.png');
+}
+
+.comerSabrosito {
+    height: 90%;
+    background-size: cover;
+}

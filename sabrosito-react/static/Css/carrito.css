@@ -16,7 +16,13 @@ img{
 
 
 .container-icon{
-    position: relative;
+    position: fixed;
+    top: 20%; /* Puedes ajustar la posición vertical según tus necesidades */
+    right: 0;
+    transform: translateY(-70%); /* Centrar verticalmente el elemento */
+    padding: 10px;
+    z-index: 9999;
+
 }
 
 .count-products{
@@ -49,7 +55,7 @@ img{
     z-index: 1;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
-    
+
 }
 
 .cart-product{
