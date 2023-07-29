@@ -11,28 +11,6 @@ def tienda(request):
     productos = Product.objects.all()
     return render(request, "02_tienda.html", {'productos':productos})
 
-@login_required
-def agregar_al_carritoNoFuncionoBien(request, product_id):
-    if 'add_to_cart_menu':
-        producto = Product.objects.get(id=product_id)
-        carrito = Carrito(request)
-        carrito.agregar(producto, request)
-        return redirect('menu')  # Redirige a la página del menú
-    elif 'add_to_cart_payment':
-        producto = Product.objects.get(id=product_id)
-        carrito = Carrito(request)
-        carrito.agregar(producto, request)
-        return redirect('pagos')
-
-@login_required
-def agregar_al_carrito(request, product_id):
-
-        redirect_page = request.POST.get('add_to_cart_menu')
-
-        producto = Product.objects.get(id=product_id)
-        carrito = Carrito(request)
-        carrito.agregar(producto, request)
-        return redirect('menu') if redirect_page else redirect('pagos')
 
 
 @login_required

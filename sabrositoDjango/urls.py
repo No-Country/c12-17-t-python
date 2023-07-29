@@ -40,12 +40,12 @@ urlpatterns = [
 
     #URLS DEL CARRITO
     path('tienda', viewsCart.tienda, name="Tienda"),
-    #path('agregar/<int:product_id>/', viewsCart.agregar_producto, name="Add"),
+    path('agregar/<int:product_id>/', viewsCart.agregar_producto, name="agregar_al_carrito"),
     path('eliminar/<int:product_id>/', viewsCart.eliminar_producto, name="Del"),
     path('restar/<int:product_id>/', viewsCart.restar_producto, name="Sub"),
     path('limpiar/', viewsCart.limpiar_carrito, name="CLS"),
     #AGREGAR Y PAGAR
-    #path('agregarypagar/<int:product_id>/', viewsCart.agregar_y_pagar, name="addandpay"),
+    path('agregarypagar/<int:product_id>/', viewsCart.agregar_y_pagar, name="addandpay"),
 
 
     #URLS DE PRODUCTOS
@@ -53,8 +53,6 @@ urlpatterns = [
     path('almuerzos', viewsCart.almuerzos, name='almuerzos'),
     path('bebidas', viewsCart.jugos, name='bebidas'),
 
-    #prueba
-    path('agregar/<int:product_id>/', viewsCart.agregar_producto, name="agregar_al_carrito"),
 
     #URL para buscar el producto que elija el usuario
     path('producto/<str:product_name>', viewsCart.buscarUnProducto, name='producto'),

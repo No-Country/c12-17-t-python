@@ -15,29 +15,27 @@
 
 <section class="u-clearfix u-section-1" id="carousel_61cc">
   <div class="u-clearfix u-sheet u-valign-middle-lg u-sheet-1">
-    <!--product--><!--product_options_json--><!--{"source":""}--><!--/product_options_json--><!--product_item-->
     <div class="u-container-style u-product u-product-1">
       {% for p in producto %}
       <form action="{% url 'agregar_al_carrito' p.id %}" method='POST'onsubmit="convertirSpanAInput(event)">
         {% csrf_token %}
       <div class="u-container-layout u-valign-top-md u-valign-top-sm u-valign-top-xs u-container-layout-1">
-        <!--product_image-->
+
         <img alt="" class="u-image u-image-default u-product-control u-image-1"
-          src="{{ p.image.url }}" alt='Imagen we' ><!--/product_image-->
+          src="{{ p.image.url }}" alt='Imagen we' >
         <div
           class="u-align-left u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-1">
-          <div class="u-container-layout u-container-layout-2"><!--product_title-->
+          <div class="u-container-layout u-container-layout-2">
             <h2 class="u-product-control u-text u-text-1">
-              <a class="u-product-title-link" style='text-align:center;'href="#"><!--product_title_content-->{{p.name}}<!--/product_title_content--></a>
-            </h2><!--/product_title--><!--product_price-->
+              <a class="u-product-title-link" style='text-align:center;'href="#">{{p.name}}</a>
+            </h2>
             <div class="u-product-control u-product-price u-product-price-1">
-              <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
+              <div class="u-price-wrapper u-spacing-10">
 
                 <div class="u-price u-text-palette-2-base" style="font-size: 1.5rem; font-weight: 700;">
-                  <!--product_regular_price_content-->${{ p.price}}<!--/product_regular_price_content--></div>
-                <!--/product_regular_price-->
+                  ${{ p.price}}</div>
               </div>
-            </div><!--/product_price-->
+            </div>
             <lt-highlighter style="display: none; z-index: 1 !important;">
               <lt-div spellcheck="false" class="lt-highlighter__wrapper"style="width: 257px; height: 51px; transform: none !important; transform-origin: 128.5px 25.6px !important; zoom: 1 !important; margin-top: 20px;">
                 <lt-div class="lt-highlighter__scroll-element" style="top: 0px; left: 0px; width: 257px; height: 51px;">
@@ -47,8 +45,7 @@
             </lt-highlighter>
             <p class="u-text u-text-2">{{p.description}}</p>
             <div class="u-border-3 u-border-grey-dark-1 u-line u-line-horizontal u-line-1"></div>
-            <!--product_button--><!--options_json--><!--{"clickType":"add-to-cart","content":"Add to Cart"}--><!--/options_json-->
-            <!--aca van los botones-->
+
             <div class="botones-agregar-carrito" style="height: 3.5rem;">
               <article>
                 <p class="text-cantidad" style="display: flex; align-items: center;">
@@ -74,7 +71,6 @@
 
               <a class="boton-agregar" style="background-color: #751061;padding: 0.5rem;color: #fff;border-radius: 5rem;" href="#"><input type='submit' style="background-color: #751061; border-style: none;" name="add_to_cart_menu" value='Agregar al carrito'></a>
 
-              <!--<a class="boton-comprar" style="background-color: #751061;padding: 0.5rem;color: #fff;border-radius: 5rem;" href="#"><input type='submit' style="background-color: #751061; border-style: none;" name="add_to_buy" value='Agregar y pagar'></a>-->
 
             </div><br>
 
@@ -124,39 +120,13 @@
       </form>
 
       {% endfor %}
-    </div><!--/product_item--><!--/product-->
+    </div>
   </div>
 </section>
 
 
 
-<section class="u-align-center u-clearfix u-section-1" id="sec-e0a8">
-  <div class="u-clearfix u-sheet u-valign-middle u-sheet-1"><!--products--><!--products_options_json--><!--{"type":"Recent","source":"","tags":"","count":""}--><!--/products_options_json-->
-    <div class="u-products u-products-1">
-      <div class="u-repeater u-repeater-1"><!--product_item-->
-        <!--recomendados-->
-        <div class="u-align-center u-container-style u-products-item u-repeater-item">
-          <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><!--product_title-->
-            <h4 class="u-product-control u-text u-text-3">
-              <a class="u-product-title-link" href="#"><!--product_title_content-->Product 2 Title<!--/product_title_content--></a>
-            </h4><!--/product_title--><!--product_price-->
-            <div class="u-product-control u-product-price u-product-price-2">
-              <div class="u-price-wrapper u-spacing-10"><!--product_old_price-->
-                <div class="u-hide-price u-old-price"><!--product_old_price_content-->$12<!--/product_old_price_content--></div><!--/product_old_price--><!--product_regular_price-->
-                <div class="u-price u-text-palette-2-base" style="font-size: 1.25rem; font-weight: 700;"><!--product_regular_price_content-->$9.95<!--/product_regular_price_content--></div><!--/product_regular_price-->
-              </div>
-            </div><!--/product_price--><!--product_image-->
-            <img alt="" class="u-expanded-width u-image u-image-default u-product-control u-image-2" src="data:image/svg+xml;base64,DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9Im1hbiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHdpZHRoPSIyNTZweCIgaGVpZ2h0PSIyNTZweCIgdmlld0JveD0iMCAwIDI1NiAyNTYiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI1NiAyNTYiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHJlY3QgZmlsbD0iI0M2RDhFMSIgd2lkdGg9IjI1NiIgaGVpZ2h0PSIyNTYiLz4NCjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBmaWxsPSIjN0Y5NkE2IiBkPSJNMTkyLjcsNTRjMCwwLDUuMywwLjMsMTMuMiw5LjJjNy45LDguOSwxNC4zLDE5LDE1LjgsMjUuOA0KCWMxLjUsNi44LDIsMTMuNiwwLjMsMTcuNWMtMS44LDMuOS0xMS40LDM0LjQtMTEuNyw0My45Yy0wLjMsOS41LTIuNiw1My0yLjYsNTNoLTEwLjVsLTIuMS01Ny43YzAsMC0wLjMtMTAuNy0zLjgtMTAuNw0KCWMtMy41LDAtMTYuNyw0LjQtMjguOSwyN0MxNTAsMTg0LjUsMTQzLDE5Ny41LDEzNiwyMDAuOGMtNywzLjMtNTcuMyw0LjItNzEsMi4xYy0xMy43LTIuMS0zMS4zLTkuNS0zMS4zLTkuNXMtMy44LTcuMSw3LTEwLjENCgljMTAuOC0zLDQxLjgtMTMsNDguMi0xNi45YzMuNy0yLjIsMjksNi45LDM4LjktNS4xYzkuMS0xMS4xLDM3LjMtNzEsNDUuNi04Mi45QzE4My40LDY0LjEsMTkwLjgsNTQsMTkyLjcsNTR6Ii8+DQo8L3N2Zz4NCg=="><!--/product_image--><!--product_content-->
-            <div class="u-align-center u-product-control u-product-desc u-text u-text-default u-text-4"><!--product_content_content-->Sample small text. Lorem ipsum dolor sit amet.<!--/product_content_content--></div><!--/product_content--><!--product_button--><!--options_json--><!--{"clickType":"add-to-cart","content":"Add to Cart"}--><!--/options_json-->
-            <a href="" class="u-border-2 u-border-grey-25 u-btn u-btn-rectangle u-button-style u-none u-product-control u-text-body-color u-btn-2"><!--product_button_content-->Add to Cart<!--/product_button_content--></a><!--/product_button-->
-          </div>
-        </div><!--/product_item--><!--product_item-->
 
-      </div>
-    </div><!--/products-->
-  </div>
-</section>
 
 <script src="{% static '/js/contador.js' %}"></script>
-<!--<script src="{% static '/js/span.js' %}"></script>-->
 {% endblock %}

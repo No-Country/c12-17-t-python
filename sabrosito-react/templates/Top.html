@@ -100,169 +100,7 @@
     </div>
     </div>
 <br>
-    <!--
 
-    Carrito prros
-
-    <div class="container-icon">
-      <div class="container-cart-icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="icon-cart"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
-          />
-        </svg>
-        {% if request.session.carrito.items %}
-        {% for key, value in request.session.carrito.items %}
-            <div class="count-products">
-              <span id="contador-productos">{{value.cantidad}}</span>
-            </div>
-        {% endfor %}
-        {% else %}
-            <div class="count-products">
-              <span id="contador-productos">0</span>
-            </div>
-        {% endif %}
-      </div>
-
-    aca va la parte del session
-
-      <div class="container-cart-products hidden-cart">
-        <div class="row-product hidden">
-          <div class="cart-product">
-              <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="icon-close"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-
-
-        {% if request.session.carrito.items %}
-        {% for key, value in request.session.carrito.items %}
-            <div class="info-cart-product">
-              <span class="cantidad-producto-carrito">{{value.cantidad}}</span>
-              <p class="titulo-producto-carrito">{{value.nombre}}</p>
-              <span class="precio-producto-carrito">{{value.precio}}</span>
-            </div>
-
-        {% endfor %}
-        {% endif %}
-          </div>
-        </div>
-
-
-        <div class="cart-total hidden">
-          <h3>Total:</h3>
-          <span class="total-pagar">{{total_carrito}}</span>
-          <a href="{% url 'pagos'%}">Prueba</a>
-        </div>
-            <p class="cart-empty">El carrito está vacío</p>
-        <a href="{% url 'pagos'%}">Ir a pagar</a>
-        </div>
-
-    </div>
-
-      -->
-
-
-
-    <!--Carrito prros-->
-
-    <!--div class="container-icon">
-      <div class="container-cart-icon">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="icon-cart"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
-          />
-        </svg>
-        {% if request.session.carrito.items %}
-        {% for key, value in request.session.carrito.items %}
-            <div class="count-products">
-              <span id="contador-productos">{{value.cantidad}}</span>
-            </div>
-        {% endfor %}
-        {% else %}
-            <div class="count-products">
-              <span id="contador-productos">0</span>
-            </div>
-        {% endif %}
-      </div>
-
-    <!--aca va la parte del session
-
-      <div class="container-cart-products hidden-cart">
-        <div class="row-product hidden">
-          <div class="cart-product">
-              <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="icon-close"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-
-
-        {% if request.session.carrito.items %}
-        {% for key, value in request.session.carrito.items %}
-            <div class="info-cart-produc">
-                <span class="cantidad-producto-carrit">{{value.cantidad}}</span>
-                <p class="titulo-producto-carrit">{{value.nombre}}</p>
-                <span class="precio-producto-carrit">{{value.precio}}</span>
-            </div>
-            <div class="cart-total hidden">
-                <h3>Total:</h3>
-                <span class="total-pagar">{{total_carrito}}</span>
-                <a href="{% url 'pagos'%}">Prueba</a>
-            </div>
-        {% endfor %}
-
-        {% else %}
-            <p class="cart-empty">El carrito está vacío</p>
-            <a href="{% url 'pagos'%}">Ir a pagar</a>
-        {% endif %}
-          </div>
-        </div>
-
-        </div>
-
-    <!--/div>-->
-
-
-
-<!--Nuevo modal familia-->
 
 <div class="container-icon" id='carritoprros'>
       <div class="container-cart-icon">
@@ -286,7 +124,6 @@
 <section class="modal_carrito" style="z-index: 3;">
   <div class="modal__container__carrito">
     <a href="" class="modal__close__carrito">Cerrar</a>
-    <!--<p>Aca va la estructura prros</p>-->
 
     <div>
     {% if request.session.carrito.items %}
@@ -339,9 +176,6 @@
 
 
 
-
-
-<!--Modal de ubicacion no lo cambien >:v-->
 
 <section class="modal" style="z-index: 3;">
   <div class="modal__container">

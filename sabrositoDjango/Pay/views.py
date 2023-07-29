@@ -35,14 +35,31 @@ def pago(request):
 def paypal_return(request):
      messages.success(request, 'Tu pago fue realizado exitosamente!')
 
+
+     def get_user_email(request):
+        if request.user.is_authenticated:
+            return request.user.email
+        else:
+            return None
+
+     def get_user_name(request):
+         if request.user.is_authenticated:
+             return request.user.username
+         else:
+             return None
+
+
      #script para enviar correo de comprobante
      def enviar_email():
           # Datos del restaurante
           nombre_restaurante = 'Sabrosito'
           correo_restaurante = 'sabrositoRte@gmail.com'
+          correo_cliente = get_user_email(request)
+          nombre_cliente = get_user_name(request)
+
 
           # Mensaje para el cliente
-          mensaje = f'Hola,\n\nGracias por elegir {nombre_restaurante}!'
+          mensaje = f'Hola, {nombre_cliente}\n\nGracias por elegir {nombre_restaurante}!'
           mensaje += '\n\nQueremos informarte que tu pago ha sido realizado con exito.'
           mensaje += ' Estamos procesando tu pedido y pronto te lo enviaremos a la comodidad de tu hogar.'
           mensaje += '\n\nApreciamos sinceramente tu preferencia y confianza en nosotros.'
@@ -62,7 +79,7 @@ def paypal_return(request):
           server.login(correo_restaurante, 'ylzempbethtbnkyv')
 
           # Enviar el correo electrónico
-          server.sendmail(correo_restaurante, 'davidcame124@gmail.com', msgEmail)
+          server.sendmail(correo_restaurante, correo_cliente, msgEmail)
 
      enviar_email()
      carrito = Carrito(request)

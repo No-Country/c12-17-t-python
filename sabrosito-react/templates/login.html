@@ -9,7 +9,6 @@
 
 <head>
   <link rel="stylesheet" href="{% static '/Css/Login.css' %}" media="screen">
-    <!--link rel="stylesheet" href="static/Css/Login.css" media="screen"-->
 </head>
 <section class="u-clearfix u-section-2" id="sec-6617">
   {% if not user.is_authenticated %}
@@ -52,12 +51,7 @@
                     <a href="#" class="u-btn u-btn-submit u-button-style" id="btnE">Enviar</a>
                     <input type="submit" value="submit" class="u-form-control-hidden" onclick="activarRefresco()">
                   </div>
-                  <!--
-                  <div class="u-form-send-message u-form-send-success"> Gracias! Tu mensaje ha sido enviado. </div>
-                  <div class="u-form-send-error u-form-send-message"> No se puede enviar su mensaje. Por favor, corrija
-                    los errores y vuelva a intentarlo. </div>
-                  <input type="hidden" value="" name="recaptchaResponse">
-                  <input type="hidden" name="formServices" value="3bebeda603f2cda298e195c823859255"> -->
+
                 </form>
                 <script>
                     function activarRefresco() {
